@@ -1,5 +1,5 @@
 describe('Login', () => {
-    it('Deberia iniciar sesion', async ()=> {
+    it('Deberia dar error al iniciar sesion', async ()=> {
     await browser.url('bank');
     let username = await $('#username');
     await username.setValue('federicodelucchi');
