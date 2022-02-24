@@ -7,6 +7,6 @@ describe('Login', () => {
     await password.setValue('12345678');
     let btn = await $('#submit');
     await btn.keys('Enter');
-    await expect(await $('span').getText('error'));
+    await expect(await $('span')).toHaveTextContaining('Error');
     });
     });
