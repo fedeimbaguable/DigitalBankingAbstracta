@@ -3,13 +3,13 @@ import BasePage from '../pages/BasePage';
 class SignUp extends BasePage {
 
   //WebElements
-  get headerSignUp() {return $('strong')}
+  get headerSignUp() {return $('.form-control-label')}
 
   get signInForm() {return $('a[href="/bank/login"]')}
 
 
   async irSignIn() {
-  await this.signInForm.click();
+  await this.signUpForm.click();
    }
 
 

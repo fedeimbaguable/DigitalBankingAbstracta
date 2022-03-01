@@ -3,13 +3,13 @@ import BasePage from '../pages/BasePage';
 class SignIn extends BasePage {
 
   //WebElements
-  get username(){ return $('[name="username"]') }
+  get usernameInput(){ return $('[name="username"]') }
   
-  get password() {return $('[name="password"]')}
+  get passwordInput() {return $('[name="password"]')}
 
   get submitbtn() {return $('#submit')};
 
-  get text() {return $('span')};
+  get signInErrorText() { return $('div[class="sufee-alert alert with-close alert-danger alert-dismissible fade show"]'); }
 
   get checkbox() {return $('#remember-me')};
 
@@ -17,13 +17,18 @@ class SignIn extends BasePage {
 
   get logo() {return $('a[href="/bank/home"]')}
 
-  get headerSignIn() {return $('strong')}
-    
-  async submit() {
+
+  async logIn (username, password){
+    await super.sendText (this.usernameInput, username);
+    await super.sendText (this.passwordInput, password);
+    await super.clickearElemento(this.submitbtn);
+  }
+
+  async submit () {
     await this.submitbtn.click();
   }
   
-  async remember() {
+  async activateRememberMeOption() {
     await this.checkbox.click();
    }
 

@@ -5,17 +5,17 @@ class HomePage extends BasePage {
   //WebElements
   get title(){ return $('#page-title') }
 
-  get userConf() { return $('img[alt="User Avatar"]')};
+  get userAvatar() { return $('img[alt="User Avatar"]')};
 
-  get logOut() {return $('a[href="/bank/logout"]')}
+  get logOutButton() {return $('a[href="/bank/logout"]')}
 
 
-  async settings() {
-    await this.userConf.click()
+  async accessUserSettings() {
+    await this.userAvatar.click()
   }
 
-  async loggingOut() {
-    await this.logOut.click()
+  async logOut() {
+    await this.logOutButton.click()
   }
   
 }
