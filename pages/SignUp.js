@@ -8,7 +8,7 @@ class SignUp extends BasePage {
   get signInForm() {return $('a[href="/bank/login"]')}
 
 
-  async irSignIn() {
+  async goSignIn() {
   await this.signUpForm.click();
    }
 

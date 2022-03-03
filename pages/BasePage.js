@@ -22,14 +22,6 @@ export default class BasePage {
     return browser.getCookies();
 }
 
-  /**
-   * Método para enviar texto a un elemento
-   * @param {Object} elemento que recibirá el texto
-   * @param {String} texto a envíar 
-   */
-  async vaciarCampoYEnviarTexto(elemento, texto){
-      await elemento.waitForClickable({ timeout: PAGE_TIMEOUT });
-  }
   async sendText(element, text){
     await element.waitForClickable({ timeout: PAGE_TIMEOUT });
     await element.setValue(text);

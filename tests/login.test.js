@@ -13,25 +13,23 @@ describe('Login', () => {
     });
     it('Should Sign In', async ()=> {
         await SignIn.open('bank')
-        await SignIn.usernameInput.setValue('jsmith@demo.io')
-        await SignIn.passwordInput.setValue('Demo123!')
-        await SignIn.submit()
+        let username = 'jsmith@demo.io'
+        let password = 'Demo123!'
+        await SignIn.logIn(username, password)
         await expect(HomePage.title).toHaveText('Dashboard')
         await HomePage.accessUserSettings()
         await HomePage.logOut()
     })
     it('Should take you to Sign In form', async ()=> {
         await SignIn.open('bank')
-        await SignIn.usernameInput.setValue('federicodelucchi@gmail.com')
-        await SignIn.irSignIn()
+        await SignIn.sendText(SignIn.usernameInput, 'federicodelucchi@gmail.com')
+        await SignIn.goSignIn()
         await expect(SignIn.usernameInput).toHaveText('')
     })
     it('Should take you to Sign Up form', async ()=> {
         await SignIn.open('bank')
-        await SignIn.irSignUp()
+        await SignIn.goSignUp()
         await expect(SignUp.headerSignUp).toHaveText('TITLE');
-        await SignIn.irSignIn()
-        await expect(SignIn.usernameInput).toHaveText('')
          })
     it('Should remember you after selecting the checkbox remebmber me', async ()=> {
         await SignIn.open('bank')

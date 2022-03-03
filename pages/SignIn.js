@@ -9,7 +9,7 @@ class SignIn extends BasePage {
 
   get submitbtn() {return $('#submit')};
 
-  get signInErrorText() { return $('div[class="sufee-alert alert with-close alert-danger alert-dismissible fade show"]'); }
+  get signInErrorText() { return $('.alert-danger'); }
 
   get checkbox() {return $('#remember-me')};
 
@@ -32,11 +32,11 @@ class SignIn extends BasePage {
     await this.checkbox.click();
    }
 
-  async irSignUp() {
+  async goSignUp() {
     await this.signUpForm.click();
    }
 
-   async irSignIn() {
+   async goSignIn() {
      await this.logo.click();
    }
   }
