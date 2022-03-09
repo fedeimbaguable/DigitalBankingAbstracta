@@ -1,6 +1,6 @@
-import BasePage from '../pages/BasePage';
+import BasePage from './BasePage';
 
-class CheckingPage extends BasePage {
+class CheckingPageForm extends BasePage {
 
     get standardCheckingButton (){return $('label[for="Standard Checking"]')}
 
@@ -18,31 +18,8 @@ class CheckingPage extends BasePage {
 
     get newCheckingFormResetButton () {return $('#newCheckingReset')}
 
-    get newCheckingConfirmation () {return $('#new-account-conf-alert')}
-
     get newCheckingErrorText () {return $('#new-account-error-msg')}
 
-    get switchChecking () { return $('.switch-label')}
-
-    get checkingBody () { return $('.even')}
-
-    get checkingFormNextButton () {return $('#transactionTable_next')}
-
-    get checkingFormPreviousButton () {return $('#transactionTable_previous')}
-
-    get checkingTableTextInfo(){return $('#transactionTable_info')}
-
-    get checkingSearchInput(){ return $('[type="search"]') }
-
-    async changeCheckingFormPageNext(){
-        await this.checkingFormNextButton.click()
-    }
-    async changeCheckingFormPagePrevious(){
-        await this.checkingFormPreviousButton.click()
-    }
-    async activateSwitchChecking (){
-        await this.switchChecking.click()
-    }
     async chooseStandardChecking () {
         await this.standardCheckingButton.click()
     }
@@ -61,6 +38,5 @@ class CheckingPage extends BasePage {
     async checkingSubmit (){
         await this.newCheckingFormSubmitButton.click()
     }
-
 }
-export default new CheckingPage();
+export default new CheckingPageForm();
