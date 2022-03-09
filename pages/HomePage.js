@@ -7,8 +7,28 @@ class HomePage extends BasePage {
 
   get userAvatar() { return $('img[alt="User Avatar"]')};
 
-  get logOutButton() {return $('a[href="/bank/logout"]')}
+  get logOutButton() {return $('a[href="/bank/logout"]')};
 
+  get newCheckingForm () {return $('#new-checking-menu-item')}
+
+  get checkingMenu () {return $('#checking-menu')}
+
+  get checkingTitle () { return $('#page-title') }
+
+  get viewCheckingForm () {return $('#view-checking-menu-item')}
+
+
+  async accessViewCheckingForm () {
+    await this.viewCheckingForm.click()
+  }
+
+  async displayCheckingMenu () {
+    await this.checkingMenu.click()
+  }
+
+  async accessNewCheckingForm () {
+    await this.newCheckingForm.click()
+  }
 
   async accessUserSettings() {
     await this.userAvatar.click()
