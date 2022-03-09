@@ -8,19 +8,19 @@ class CheckingPageTable extends BasePage {
 
     get checkingBody () { return $('.even')}
 
-    get checkingFormNextButton () {return $('#transactionTable_next')}
+    get checkingTransactionsTableNextButton () {return $('#transactionTable_next')}
 
-    get checkingFormPreviousButton () {return $('#transactionTable_previous')}
+    get checkingTransactionsTablePreviousButton () {return $('#transactionTable_previous')}
 
     get checkingTableTextInfo(){return $('#transactionTable_info')}
 
     get checkingSearchInput(){ return $('[type="search"]') }
 
-    async changeCheckingFormPageNext(){
-        await this.checkingFormNextButton.click()
+    async changeCheckingTransactionsTableNext(){
+        await this.checkingTransactionsTableNextButton.click()
     }
-    async changeCheckingFormPagePrevious(){
-        await this.checkingFormPreviousButton.click()
+    async changeCheckingTransactionsTablePrevious(){
+        await this.checkingTransactionsTablePreviousButton.click()
     }
     async activateSwitchChecking (){
         await this.switchChecking.click()
