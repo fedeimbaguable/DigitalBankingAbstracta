@@ -4,12 +4,12 @@ import CheckingPageForm from "../pages/CheckinPageForm"
 import CheckingPageTable from "../pages/CheckingPageTable";
 import CorrectCheckings from "../datos/CorrectCheckings";
 import IncorrectCheckings from "../datos/IncorrectCheckings"
- 
-beforeEach(function () {
-    SignIn.open('bank')
-    let username = 'jsmith@demo.io'
-    let password = 'Demo123!'
-    SignIn.logIn(username, password)
+
+beforeEach(async () => {
+    await SignIn.open('bank');
+    let username = 'jsmith@demo.io';
+    let password = 'Demo123!';
+    await SignIn.logIn(username, password);
 });
 describe('Checkings', () => {
 it('Should take you to Checkings form', async ()=> {
