@@ -16,7 +16,7 @@ class CheckingPageTable extends BasePage {
 
     get getCellFromForRow(){return $(`#transactionTable>tbody>tr:nth-child(${row})>td:nth-child(2)`)}
 
-    get getTableNumberOfRows(){return $$('tbody tr')}
+    get getTableNumberOfRows(){return $('tbody')}
 
     get checkingSearchInput(){ return $('[type="search"]') }
 

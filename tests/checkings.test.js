@@ -35,21 +35,17 @@ it('Should see the three pages going forwards and backwards', async ()=> {
     await CheckingPageTable.changeCheckingTransactionsTablePrevious()
     await expect(CheckingPageTable.checkingTableTextInfo).toHaveText('Showing 1 to 10 of 24 entries')
 })
-//it('Should filter the table with the word "Income"', async ()=> {
-//    await HomePage.displayCheckingMenu() 
-//    await HomePage.accessViewCheckingTable()
-//    await CheckingPageTable.sendText(CheckingPageTable.checkingSearchInput, 'Income')
-//    const row = await $$('#transactionTable tr');
-//    let tableLength = await CheckingPage.getTableNumberOfRows();
-//    let cell;
-//    for(let i=0; i< rowsLength; i++){
-//    cell = await CheckingPage.getCellFromForRow(i);
-//    await expect(cell).toHaveTextContaining("Income");
-//}
- //   
- //   const columns = await rows[1,2,3,4].$$('td');
-  //  await expect(columns[1]).toHaveText('Income'); 
-//})
+it.only('Should filter the table with the word "Income"', async ()=> {
+    await HomePage.displayCheckingMenu() 
+    await HomePage.accessViewCheckingTable()
+    await CheckingPageTable.sendText(CheckingPageTable.checkingSearchInput, 'Income')
+    let tableLength = await CheckingPageTable.getTableNumberOfRows;
+    let cell;
+    for(let i=0; i<= tableLength; i++){
+    cell = await CheckingPageTable.getCellFromForRow(i);
+    await expect(cell).toHaveTextContaining("Income");
+} 
+})
 it('Should reset the account creation form when clicking reset', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessNewCheckingForm()
