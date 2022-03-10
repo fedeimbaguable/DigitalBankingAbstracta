@@ -6,7 +6,8 @@
   "scripts": {
     "test": "wdio ./wdio.conf.js",
     "login": "wdio ./wdio.conf.js --suite login",
-    "checking": "wdio ./wdio.conf.js --suite checking"
+    "checking": "wdio ./wdio.conf.js --suite checking",
+    "savings": "wdio ./wdio.conf.js --suite savings"
   },
   "author": "Federico",
   "license": "ISC",

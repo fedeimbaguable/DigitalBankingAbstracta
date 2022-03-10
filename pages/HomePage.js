@@ -9,34 +9,41 @@ class HomePage extends BasePage {
 
   get logOutButton() {return $('a[href="/bank/logout"]')};
 
-  get newCheckingForm () {return $('#new-checking-menu-item')}
+  get newCheckingForm () {return $('#new-checking-menu-item')};
 
-  get checkingMenu () {return $('#checking-menu')}
+  get checkingMenu () {return $('#checking-menu')};
 
-  get checkingTitle () { return $('#page-title') }
+  get viewCheckingTable () {return $('#view-checking-menu-item')};
 
-  get viewCheckingForm () {return $('#view-checking-menu-item')}
+  get newSavingsForm () {return $('#new-savings-menu-item')};
 
+  get savingsMenu () {return $('#savings-menu')};
 
-  async accessViewCheckingForm () {
-    await this.viewCheckingForm.click()
+  get viewSavingsTable () {return $('#view-savings-menu-item')};
+
+  async accessViewSavingsTable () {
+    await this.viewSavingsTable.click()
   }
-
+  async displaySavingsMenu () {
+    await this.savingsMenu.click()
+  }
+  async accessNewSavingsForm () {
+    await this.newSavingsForm.click()
+  }
+  async accessViewCheckingTable () {
+    await this.viewCheckingTable.click()
+  }
   async displayCheckingMenu () {
     await this.checkingMenu.click()
   }
-
   async accessNewCheckingForm () {
     await this.newCheckingForm.click()
   }
-
   async accessUserSettings() {
     await this.userAvatar.click()
   }
-
   async logOut() {
     await this.logOutButton.click()
   }
-  
 }
 export default new HomePage();

@@ -2,6 +2,8 @@ import HomePage from "../pages/HomePage";
 import SignIn from "../pages/SignIn";
 import CheckingPageForm from "../pages/CheckinPageForm"
 import CheckingPageTable from "../pages/CheckingPageTable";
+import CorrectCheckings from "../datos/CorrectCheckings";
+import IncorrectCheckings from "../datos/IncorrectCheckings"
  
 beforeEach(function () {
     SignIn.open('bank')
@@ -9,22 +11,20 @@ beforeEach(function () {
     let password = 'Demo123!'
     SignIn.logIn(username, password)
 });
-
-
 describe('Checkings', () => {
 it('Should take you to Checkings form', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessNewCheckingForm()
-    await expect(HomePage.checkingTitle).toHaveText('Create Checking')
+    await expect(CheckingPageForm.checkingTitle).toHaveText('Create Checking')
 })
 it('Should take you to Checkings View', async ()=> {
     await HomePage.displayCheckingMenu() 
-    await HomePage.accessViewCheckingForm()
-    await expect(HomePage.checkingTitle).toHaveText('View Checking Accounts')
+    await HomePage.accessViewCheckingTable()
+    await expect(CheckingPageTable.checkingTitle).toHaveText('View Checking Accounts')
 })
 it('Should see the three pages going forwards and backwards', async ()=> {
     await HomePage.displayCheckingMenu() 
-    await HomePage.accessViewCheckingForm()
+    await HomePage.accessViewCheckingTable()
     await CheckingPageTable.changeCheckingTransactionsTableNext()
     await expect(CheckingPageTable.checkingTableTextInfo).toHaveText('Showing 11 to 20 of 24 entries')
     await CheckingPageTable.changeCheckingTransactionsTableNext()
@@ -36,71 +36,40 @@ it('Should see the three pages going forwards and backwards', async ()=> {
 })
 it('Should filter the table with the word "Income"', async ()=> {
     await HomePage.displayCheckingMenu() 
-    await HomePage.accessViewCheckingForm()
+    await HomePage.accessViewCheckingTable()
     await CheckingPageTable.sendText(CheckingPageTable.checkingSearchInput, 'Income')
-    await expect(CheckingPageTable.checkingTableTextInfo).toHaveTextContaining('(filtered from 24 total entries)')
+    const rows = await $$('#transactionTable tr');
+    const columns = await rows[1,2,3,4].$$('td');
+    await expect(columns[1]).toHaveText('Income'); 
 })
-it('Should reset the data', async ()=> {
+it('Should reset the account creation form when clicking reset', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessNewCheckingForm()
     await CheckingPageForm.sendText(CheckingPageForm.checkingNameInput, '1234')
     await CheckingPageForm.checkingReset()
     await expect(CheckingPageForm.checkingNameInput).toHaveText('')
 })
-it('Should create a Standard Individual Checking', async ()=> {
+CorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
+    it(`Should create a  ${reason}`, async () => {
+        await HomePage.displayCheckingMenu() 
+        await HomePage.accessNewCheckingForm()
+        await CheckingPageForm.createChecking(type, ownership, name, amount)
+        await expect(CheckingPageTable.newCheckingConfirmation).toBeDisplayed()
+    })
+    });
+
+//it('Should switch checking', async ()=> {
+  //  await HomePage.displayCheckingMenu() 
+  //  await HomePage.accessViewCheckingForm()
+  //  await CheckingPageTable.activateSwitchChecking()
+  //  await expect(CheckingPageTable.checkingBody).toBeDisplayed()
+//})
+IncorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
+it(`Should not create a checking ${reason}`, async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessNewCheckingForm()
-    await CheckingPageForm.chooseStandardChecking()
-    await CheckingPageForm.chooseIndividualChecking()
-    await CheckingPageForm.sendText(CheckingPageForm.checkingNameInput, 'Standard Individual Checking')
-    await CheckingPageForm.sendText(CheckingPageForm.checkingDepositInput, '25')
-    await CheckingPageForm.checkingSubmit()
-    await expect(CheckingPageTable.newCheckingConfirmation).toBeDisplayed()
+    await CheckingPageForm.createChecking(type, ownership, name, amount)
+    await expect(CheckingPageForm.standardCheckingButton).toBePresent()
 })
-it('Should switch checking', async ()=> {
-    await HomePage.displayCheckingMenu() 
-    await HomePage.accessViewCheckingForm()
-    await CheckingPageTable.activateSwitchChecking()
-    await expect(CheckingPageTable.checkingBody).toBeDisplayed()
-})
-it('Should create a Standard Joint Checking', async ()=> {
-    await HomePage.displayCheckingMenu() 
-    await HomePage.accessNewCheckingForm()
-    await CheckingPageForm.chooseStandardChecking()
-    await CheckingPageForm.chooseJointChecking()
-    await CheckingPageForm.sendText(CheckingPageForm.checkingNameInput, 'Standard Joint Checking')
-    await CheckingPageForm.sendText(CheckingPageForm.checkingDepositInput, '50.47')
-    await CheckingPageForm.checkingSubmit()
-    await expect(CheckingPageTable.newCheckingConfirmation).toBeDisplayed()
-})
-it('Should create a Interest Individual Checking', async ()=> {
-    await HomePage.displayCheckingMenu() 
-    await HomePage.accessNewCheckingForm()
-    await CheckingPageForm.chooseInterestChecking()
-    await CheckingPageForm.chooseIndividualChecking()
-    await CheckingPageForm.sendText(CheckingPageForm.checkingNameInput, 'Interest Individual Checking')
-    await CheckingPageForm.sendText(CheckingPageForm.checkingDepositInput, '1000000')
-    await CheckingPageForm.checkingSubmit()
-    await expect(CheckingPageTable.newCheckingConfirmation).toBeDisplayed()
-})
-it('Should create a Interest Joint Checking', async ()=> {
-    await HomePage.displayCheckingMenu() 
-    await HomePage.accessNewCheckingForm()
-    await CheckingPageForm.chooseInterestChecking()
-    await CheckingPageForm.chooseJointChecking()
-    await CheckingPageForm.sendText(CheckingPageForm.checkingNameInput, 'Interest Joint Checking')
-    await CheckingPageForm.sendText(CheckingPageForm.checkingDepositInput, '10000000')
-    await CheckingPageForm.checkingSubmit()
-    await expect(CheckingPageTable.newCheckingConfirmation).toBeDisplayed()
-})
-it('Should not create a checking because the deposit is less than 25', async ()=> {
-    await HomePage.displayCheckingMenu() 
-    await HomePage.accessNewCheckingForm()
-    await CheckingPageForm.chooseStandardChecking()
-    await CheckingPageForm.chooseIndividualChecking()
-    await CheckingPageForm.sendText(CheckingPageForm.checkingNameInput, 'Error')
-    await CheckingPageForm.sendText(CheckingPageForm.checkingDepositInput, '24.99')
-    await CheckingPageForm.checkingSubmit()
-    await expect(CheckingPageForm.newCheckingErrorText).toBeDisplayed()
-})
+});
 });

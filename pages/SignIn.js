@@ -21,7 +21,7 @@ class SignIn extends BasePage {
   async logIn (username, password){
     await super.sendText (this.usernameInput, username);
     await super.sendText (this.passwordInput, password);
-    await super.clickearElemento(this.submitbtn);
+    await super.clickElement(this.submitbtn);
   }
 
   async submit () {

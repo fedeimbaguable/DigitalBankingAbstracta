@@ -14,7 +14,11 @@ class CheckingPageTable extends BasePage {
 
     get checkingTableTextInfo(){return $('#transactionTable_info')}
 
+    get checkingTableFilter(){return $('tbody')}
+
     get checkingSearchInput(){ return $('[type="search"]') }
+
+    get checkingTitle () { return $('#page-title') }
 
     async changeCheckingTransactionsTableNext(){
         await this.checkingTransactionsTableNextButton.click()

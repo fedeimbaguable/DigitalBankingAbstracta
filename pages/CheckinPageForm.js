@@ -20,6 +20,17 @@ class CheckingPageForm extends BasePage {
 
     get newCheckingErrorText () {return $('#new-account-error-msg')}
 
+    get checkingTitle () { return $('#page-title') }
+
+
+    async createChecking (type, ownership, name, amount){
+        await super.clickElement(type === "standard" ? await this.standardCheckingButton : await this.interestCheckingButton);
+        await super.clickElement(ownership === "individual" ? await this.individualCheckingButton : await this.jointCheckingButton);
+        await super.sendText (this.checkingNameInput, name);
+        await super.sendText (this.checkingDepositInput, amount);
+        await super.clickElement(this.newCheckingFormSubmitButton);
+      }
+
     async chooseStandardChecking () {
         await this.standardCheckingButton.click()
     }
