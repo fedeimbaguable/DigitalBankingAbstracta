@@ -6,11 +6,11 @@ import CorrectSavings from "../datos/CorrectSavings";
 import IncorrectCheckings from "../datos/IncorrectSavings"
 
 
-beforeEach(function () {
-    SignIn.open('bank')
-    let username = 'jsmith@demo.io'
-    let password = 'Demo123!'
-    SignIn.logIn(username, password)
+beforeEach(async () => {
+    await SignIn.open('bank');
+    let username = 'jsmith@demo.io';
+    let password = 'Demo123!';
+    await SignIn.logIn(username, password);
 });
 describe('Savings', () => {
 it('Should take you to Savings form', async ()=> {
