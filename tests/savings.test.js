@@ -7,7 +7,7 @@ import IncorrectCheckings from "../datos/IncorrectSavings"
 
 
 beforeEach(async () => {
-    await SignIn.open('bank');
+    await SignIn.open('bank/login');
     let username = 'jsmith@demo.io';
     let password = 'Demo123!';
     await SignIn.logIn(username, password);
@@ -23,14 +23,14 @@ it('Should take you to Savings View', async ()=> {
     await HomePage.accessViewSavingsTable()
     await expect(SavingsTable.savingTitle).toHaveText('View Savings Accounts')
 })
-it('Should filter the table with the word "Interest"', async ()=> {
-    await HomePage.displaySavingsMenu() 
-    await HomePage.accessViewSavingsTable()
-    await SavingsTable.sendText(SavingsTable.savingSearchInput, 'Interest')
-    const rows = await $$('#transactionTable tr');
-    const columns = await rows[1,2,3,4,5,6].$$('td');
-    await expect(columns[2]).toHaveTextContaining('Interest'); 
-})
+//it('Should filter the table with the word "Interest"', async ()=> {
+//    await HomePage.displaySavingsMenu() 
+//    await HomePage.accessViewSavingsTable()
+//    await SavingsTable.sendText(SavingsTable.savingSearchInput, 'Interest')
+//    const rows = await $$('#transactionTable tr');
+//    const columns = await rows[1,2,3,4,5,6].$$('td');
+//    await expect(columns[2]).toHaveTextContaining('Interest'); 
+//})
 it('Should reset the account creation form when clicking reset', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessNewSavingsForm()
@@ -46,6 +46,12 @@ CorrectSavings.forEach(({type, ownership, name, amount, reason}) => {
         await expect(SavingsTable.newSavingConfirmation).toBeDisplayed()
     })
     });
+it('Should switch checking', async ()=> {
+    await HomePage.displaySavingsMenu() 
+    await HomePage.accessViewSavingsTable()
+    await SavingsTable.activateSwitchSaving()
+    await expect(SavingsTable.switchChecked).toHaveAttribute('checked', 'true')
+})
 IncorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
     it(`Should not create a saving ${reason}`, async ()=> {
         await HomePage.displaySavingsMenu() 

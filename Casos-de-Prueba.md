@@ -117,7 +117,7 @@ Title : Should create a Standard Individual Checking.
 Description:  We go to the new checkings form select the options Standard and Individual, type data in the inputs and submit.
 Date: 08/03/2022
 Functionality: Create a checking.
-Input data and actions: We select the Standard and Individual options by clicking them, then we type the name of the checking and the deposit amount: Standard Individual Checking-25 and submit the form.
+Input data and actions: We select the Standard and Individual options by clicking them, then we type the name of the checking and the deposit amount: Standard Individual-25 and submit the form.
 Expected Result: Create a Standard and indiviudal checking with a deposit of 25.
 Obtained Result: The checking was created correctly.
 
@@ -126,7 +126,7 @@ Title : Should create a Standard Joint Checking.
 Description:  We go to the new checkings form select the options Standard and joint, type data in the inputs and submit.
 Date: 08/03/2022
 Functionality: Create a checking.
-Input data and actions: We select the Standard and Joint options by clicking them, then we type the name of the checking and the deposit amount: Standard Joint Checking-50.47 and submit the form.
+Input data and actions: We select the Standard and Joint options by clicking them, then we type the name of the checking and the deposit amount: Standard Joint-50.47 and submit the form.
 Expected Result: Create a standard and joint checking with a deposit of 50.47.
 Obtained Result: The checking was created correctly.
 
@@ -135,7 +135,7 @@ Title : Should create a Interest Individual Checking.
 Description:  We go to the new checkings form select the options Interest and Individual, type data in the inputs and submit.
 Date: 08/03/2022
 Functionality: Create a checking.
-Input data and actions: We select the Interest and Individual options by clicking them, then we type the name of the checking and the deposit amount: Interest Individual Checking-1000000 and submit the form.
+Input data and actions: We select the Interest and Individual options by clicking them, then we type the name of the checking and the deposit amount: Interest Individual-1000000 and submit the form.
 Expected Result: Create a interest and indiviudal checking with a deposit of 1000000.
 Obtained Result: The checking was created correctly.
 
@@ -144,7 +144,7 @@ Title : Should create a Interest Joint Checking.
 Description:  We go to the new checkings form select the options Interest and Joint, type data in the inputs and submit.
 Date: 08/03/2022
 Functionality: Create a checking.
-Input data and actions: We select the Interest and Joint options by clicking them, then we type the name of the checking and the deposit amount: Interest Joint Checking-10000000 and submit the form.
+Input data and actions: We select the Interest and Joint options by clicking them, then we type the name of the checking and the deposit amount: Interest Joint-10000000 and submit the form.
 Expected Result: Create a interest and joint checking with a deposit of 10000000.
 Obtained Result: The checking was created correctly.
 
@@ -190,8 +190,8 @@ Description:Go to the view checkings page and change the checking we are looking
 Date: 08/03/2022
 Functionality: Change the checking we are viewing.
 Input data and actions: We click on checking and aftwerwards on view checking, once we are in the view checking page we click on the button of the card we want to see.
-Expected Result: Take us to the Bank's view checking form and change the check view.
-Obtained Result: The webapp took us to the view checkings form and we changed the check we were looking at.
+Expected Result: Take us to the Bank's view checking page and change the checking view.
+Obtained Result: The webapp took us to the view checkings page and we changed the checking we were looking at.
 
 22)
 Title : Should change the page.
@@ -318,3 +318,12 @@ Functionality: Reject a new saving.
 Input data and actions: We select the Interest and Joint options by clicking them, then we type the name of the saving and the deposit amount: Error-() and submit the form.
 Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
 Obtained Result: The saving was not created correctly and we stayed on the same form.
+
+36)
+Title : Should switch savings.
+Description:Go to the view savings page and change the savings we are looking at.
+Date: 10/03/2022
+Functionality: Change the savings we are viewing.
+Input data and actions: We click on savings and aftwerwards on view savings, once we are in the view savings page we click on the button of the card we want to see.
+Expected Result: Take us to the Bank's view savings page and change the saving view.
+Obtained Result: The webapp took us to the view savings page and we changed the check we were looking at.

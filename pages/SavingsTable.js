@@ -4,9 +4,9 @@ class SavingsTable extends BasePage {
     
     get newSavingConfirmation () {return $('#new-account-conf-alert')}
 
-    get switchSaving () { return $('.switch-label')}
+    get switchSaving () { return $('//*[contains(text(),"Indiviudal Savings")]//ancestor::div[@class="card-body"]//span[@class="switch-handle"]')}
 
-    get savingsBody () { return $('.even')}
+    get switchChecked () { return $('//*[contains(text(),"Indiviudal Savings")]//ancestor::div[@class="card-body"]//input[@class="switch-input"]')}
 
     get savingSearchInput(){ return $('[type="search"]') }
 
