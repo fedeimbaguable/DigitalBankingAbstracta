@@ -84,3 +84,237 @@ Functionality: Remember the user.
 Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click the checkbox remebmber me and submit the form
 Expected Result: Let us sign in and take us to the Bank's personal dashboard and when analyzing the cookies to see the user remembered, as cookies are set in one by default in this browser if after doing the test the number of cookies was more than one the browser remembered us correctly.
 Obtained Result: The webapp took us to the dashboard allowing us the access it was expected and the result in the cookies was, that cookies had a length bigger than one, so the browser remembered us.
+
+10)
+Title : Should take you to Checkings form.
+Description: We sign in to the account and then go to the new checkings form.
+Date: 08/03/2022
+Functionality: Take us to the new checkings form.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on checking and aftwerwards on new checking
+Expected Result: Let us sign in and take us to the Bank's new checking form.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new checkings form.
+
+11)
+Title : Should take you to View Checkings form.
+Description:Go to the view checkings page.
+Date: 08/03/2022
+Functionality: Take us to the view checkings form.
+Input data and actions: We click on checking and aftwerwards on view checking
+Expected Result: Take us to the Bank's view checking form.
+Obtained Result: The webapp took us to the view checkings form.
+
+12)
+Title : Should reset the account creation form when clicking reset.
+Description: We go to the new checkings form type data in the names input and then reset.
+Date: 08/03/2022
+Functionality: Reset the new checkings form.
+Input data and actions: We go to the new checkings form type "1234" in the name input and then click the reset button.
+Expected Result: Reset the new checkings form.
+Obtained Result: The checkings form was reset and the inputs are blank.
+
+13)
+Title : Should create a Standard Individual Checking.
+Description:  We go to the new checkings form select the options Standard and Individual, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Create a checking.
+Input data and actions: We select the Standard and Individual options by clicking them, then we type the name of the checking and the deposit amount: Standard Individual Checking-25 and submit the form.
+Expected Result: Create a Standard and indiviudal checking with a deposit of 25.
+Obtained Result: The checking was created correctly.
+
+14)
+Title : Should create a Standard Joint Checking.
+Description:  We go to the new checkings form select the options Standard and joint, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Create a checking.
+Input data and actions: We select the Standard and Joint options by clicking them, then we type the name of the checking and the deposit amount: Standard Joint Checking-50.47 and submit the form.
+Expected Result: Create a standard and joint checking with a deposit of 50.47.
+Obtained Result: The checking was created correctly.
+
+15)
+Title : Should create a Interest Individual Checking.
+Description:  We go to the new checkings form select the options Interest and Individual, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Create a checking.
+Input data and actions: We select the Interest and Individual options by clicking them, then we type the name of the checking and the deposit amount: Interest Individual Checking-1000000 and submit the form.
+Expected Result: Create a interest and indiviudal checking with a deposit of 1000000.
+Obtained Result: The checking was created correctly.
+
+16)
+Title : Should create a Interest Joint Checking.
+Description:  We go to the new checkings form select the options Interest and Joint, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Create a checking.
+Input data and actions: We select the Interest and Joint options by clicking them, then we type the name of the checking and the deposit amount: Interest Joint Checking-10000000 and submit the form.
+Expected Result: Create a interest and joint checking with a deposit of 10000000.
+Obtained Result: The checking was created correctly.
+
+17)
+Title : Should not create a checking because the deposit is less than 25.
+Description:  We go to the new checkings form select the options Standard and Individual, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Reject a new checking.
+Input data and actions: We select the Standard and Individual options by clicking them, then we type the name of the checking and the deposit amount: Error-24.99 and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The checking was not created correctly and we stayed on the same form.
+
+18)
+Title : Should not create a checking because the deposit is in negative numbers.
+Description:  We go to the new checkings form select the options Standard and Joint, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Reject a new checking.
+Input data and actions: We select the Standard and Joint options by clicking them, then we type the name of the checking and the deposit amount: Error-(-30)) and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The checking was not created correctly and we stayed on the same form.
+
+19)
+Title : Should not create a checking because the deposit is letters.
+Description:  We go to the new checkings form select the options Interest and Individual, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Reject a new checking.
+Input data and actions: We select the Interest and Individual options by clicking them, then we type the name of the checking and the deposit amount: Error-jdskjksf and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The checking was not created correctly and we stayed on the same form.
+
+20)
+Title : Should not create a checking because the deposit is blank.
+Description:  We go to the new checkings form select the options Interest and Joint, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Reject a new checking.
+Input data and actions: We select the Interest and Joint options by clicking them, then we type the name of the checking and the deposit amount: Error-() and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The checking was not created correctly and we stayed on the same form.
+
+21)
+Title : Should switch checking.
+Description:Go to the view checkings page and change the checking we are looking at.
+Date: 08/03/2022
+Functionality: Change the checking we are viewing.
+Input data and actions: We click on checking and aftwerwards on view checking, once we are in the view checking page we click on the button of the card we want to see.
+Expected Result: Take us to the Bank's view checking form and change the check view.
+Obtained Result: The webapp took us to the view checkings form and we changed the check we were looking at.
+
+22)
+Title : Should change the page.
+Description:Go to the view checkings page and change the pages of the table of transaction forwards and then backwards.
+Date: 08/03/2022
+Functionality: Change the pages of the checking we are viewing.
+Input data and actions: Once we are in the view checking page we click on the button next changing pages forwards and then click on the page previous to go back.
+Expected Result: Change the pages forwards and backwards.
+Obtained Result: We changed the pages correctly.
+
+23)
+Title : Should filter the table.
+Description:Go to the view checkings page and filter the table of transaction.
+Date: 08/03/2022
+Functionality: Filter the checking we are viewing.
+Input data and actions: Once we are in the view checking page we type the word "income" in the search input to filter this word.
+Expected Result: Filter the table with the word income.
+Obtained Result: We could filter the table with the word income correctly.
+
+24)
+Title : Should take you to Savings form.
+Description: We sign in to the account and then go to the new savings form.
+Date: 10/03/2022
+Functionality: Take us to the new savings form.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on savings and aftwerwards on new savings
+Expected Result: Let us sign in and take us to the Bank's new savings form.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new savings form.
+
+25)
+Title : Should take you to View Savings form.
+Description:Go to the view savings page.
+Date: 10/03/2022
+Functionality: Take us to the view savings form.
+Input data and actions: We click on savings and aftwerwards on view savings
+Expected Result: Take us to the Bank's view savings form.
+Obtained Result: The webapp took us to the view savings form.
+
+26)
+Title : Should filter the table.
+Description:Go to the view savings page and filter the table of transaction.
+Date: 10/03/2022
+Functionality: Filter the saving we are viewing.
+Input data and actions: Once we are in the view savings page we type the word "interest" in the search input to filter this word.
+Expected Result: Filter the table with the word interest.
+Obtained Result: We could filter the table with the word interest correctly.
+
+27)
+Title : Should reset the account creation form when clicking reset.
+Description: We go to the new savings form type data in the names input and then reset.
+Date: 10/03/2022
+Functionality: Reset the new savings form.
+Input data and actions: We go to the new savings form type "1234" in the name input and then click the reset button.
+Expected Result: Reset the new savings form.
+Obtained Result: The savings form was reset and the inputs are blank.
+
+28)
+Title : Should create a Savings Individual Savings.
+Description:  We go to the new savings form select the options Savings and Individual, type data in the inputs and submit.
+Date: 10/03/2022
+Functionality: Create a Saving.
+Input data and actions: We select the Savings and Individual options by clicking them, then we type the name of the saving and the deposit amount: Savings Individual Savings-25 and submit the form.
+Expected Result: Create a Savings and Indiviudal saving with a deposit of 25.
+Obtained Result: The saving was created correctly.
+
+29)
+Title : Should create a Savings Joint Saving.
+Description:  We go to the new savings form select the options Savings and Joint, type data in the inputs and submit.
+Date: 10/03/2022
+Functionality: Create a Saving.
+Input data and actions: We select the Savings and Joint options by clicking them, then we type the name of the saving and the deposit amount: Savings Joint Saving-50.47 and submit the form.
+Expected Result: Create a Savings and Joint saving with a deposit of 50.47.
+Obtained Result: The saving was created correctly
+
+30)
+Title : Should create a Money Market Individual Saving.
+Description:  We go to the new savings form select the options Money Market and Individual, type data in the inputs and submit.
+Date: 10/03/2022
+Functionality: Create a Saving.
+Input data and actions: We select the Money Market and Individual options by clicking them, then we type the name of the saving and the deposit amount: Money Market Individual Saving-1000000 and submit the form.
+Expected Result: Create a Money Market and indiviudal saving with a deposit of 1000000.
+Obtained Result: The saving was created correctly
+
+31)
+Title : Should create a Money Market Joint Saving.
+Description:  We go to the new savings form select the options Money Market and Joint, type data in the inputs and submit.
+Date: 10/03/2022
+Functionality: Create a Saving.
+Input data and actions: We select the Money Market and Joint options by clicking them, then we type the name of the saving and the deposit amount: Money Market Joint Saving-10000000 and submit the form.
+Expected Result: Create a Money Market and Joint saving with a deposit of 10000000.
+Obtained Result: The saving was created correctly
+
+32)
+Title : Should not create a saving because the deposit is less than 25.
+Description:  We go to the new savings form select the options Standard and Individual, type data in the inputs and submit.
+Date: 10/03/2022
+Functionality: Reject a new saving.
+Input data and actions: We select the Standard and Individual options by clicking them, then we type the name of the saving and the deposit amount: Error-24.99 and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The saving was not created correctly and we stayed on the same form.
+
+33)
+Title : Should not create a saving because the deposit is in negative numbers.
+Description:  We go to the new savings form select the options Standard and Joint, type data in the inputs and submit.
+Date: 10/03/2022
+Functionality: Reject a new saving.
+Input data and actions: We select the Standard and Joint options by clicking them, then we type the name of the saving and the deposit amount: Error-(-30)) and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The saving was not created correctly and we stayed on the same form.
+
+34)
+Title : Should not create a saving because the deposit is letters.
+Description:  We go to the new savings form select the options Interest and Individual, type data in the inputs and submit.
+Date: 10/03/2022
+Functionality: Reject a new saving.
+Input data and actions: We select the Interest and Individual options by clicking them, then we type the name of the saving and the deposit amount: Error-jdskjksf and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The saving was not created correctly and we stayed on the same form.
+
+35)
+Title : Should not create a saving because the deposit is blank.
+Description:  We go to the new savings form select the options Interest and Joint, type data in the inputs and submit.
+Date: 10/03/2022
+Functionality: Reject a new saving.
+Input data and actions: We select the Interest and Joint options by clicking them, then we type the name of the saving and the deposit amount: Error-() and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The saving was not created correctly and we stayed on the same form.
