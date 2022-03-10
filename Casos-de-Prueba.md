@@ -154,10 +154,37 @@ Description:  We go to the new checkings form select the options Standard and In
 Date: 08/03/2022
 Functionality: Reject a new checking.
 Input data and actions: We select the Standard and Individual options by clicking them, then we type the name of the checking and the deposit amount: Error-24.99 and submit the form.
-Expected Result: Should give us an error, explaining the minimum deposit is 25.
-Obtained Result: The checking was not created correctly and a text error was displayed.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The checking was not created correctly and we stayed on the same form.
 
 18)
+Title : Should not create a checking because the deposit is in negative numbers.
+Description:  We go to the new checkings form select the options Standard and Joint, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Reject a new checking.
+Input data and actions: We select the Standard and Joint options by clicking them, then we type the name of the checking and the deposit amount: Error-(-30)) and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The checking was not created correctly and we stayed on the same form.
+
+19)
+Title : Should not create a checking because the deposit is letters.
+Description:  We go to the new checkings form select the options Interest and Individual, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Reject a new checking.
+Input data and actions: We select the Interest and Individual options by clicking them, then we type the name of the checking and the deposit amount: Error-jdskjksf and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The checking was not created correctly and we stayed on the same form.
+
+20)
+Title : Should not create a checking because the deposit is blank.
+Description:  We go to the new checkings form select the options Interest and Joint, type data in the inputs and submit.
+Date: 08/03/2022
+Functionality: Reject a new checking.
+Input data and actions: We select the Interest and Joint options by clicking them, then we type the name of the checking and the deposit amount: Error-() and submit the form.
+Expected Result: Should keep on the page and dont redirect us to the table with the confirmation message.
+Obtained Result: The checking was not created correctly and we stayed on the same form.
+
+21)
 Title : Should switch checking.
 Description:Go to the view checkings page and change the checking we are looking at.
 Date: 08/03/2022
@@ -166,7 +193,7 @@ Input data and actions: We click on checking and aftwerwards on view checking, o
 Expected Result: Take us to the Bank's view checking form and change the check view.
 Obtained Result: The webapp took us to the view checkings form and we changed the check we were looking at.
 
-19)
+22)
 Title : Should change the page.
 Description:Go to the view checkings page and change the pages of the table of transaction forwards and then backwards.
 Date: 08/03/2022
@@ -175,7 +202,7 @@ Input data and actions: Once we are in the view checking page we click on the bu
 Expected Result: Change the pages forwards and backwards.
 Obtained Result: We changed the pages correctly.
 
-20)
+23)
 Title : Should filter the table.
 Description:Go to the view checkings page and filter the table of transaction.
 Date: 08/03/2022
