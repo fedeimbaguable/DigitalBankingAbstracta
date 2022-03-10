@@ -4,9 +4,9 @@ class CheckingPageTable extends BasePage {
     
     get newCheckingConfirmation () {return $('#new-account-conf-alert')}
 
-    get switchChecking () { return $('.switch-label')}
+    get switchChecking () { return $('//*[contains(text(),"Individual Checking")]//ancestor::div[@class="card-body"]//span[@class="switch-handle"]')}
 
-    get checkingBody () { return $('.even')}
+    get switchChecked () { return $('//*[contains(text(),"Individual Checking")]//ancestor::div[@class="card-body"]//input[@class="switch-input"]')}
 
     get checkingTransactionsTableNextButton () {return $('#transactionTable_next')}
 
@@ -14,7 +14,9 @@ class CheckingPageTable extends BasePage {
 
     get checkingTableTextInfo(){return $('#transactionTable_info')}
 
-    get checkingTableFilter(){return $('tbody')}
+    get getCellFromForRow(){return $(`#transactionTable>tbody>tr:nth-child(${row})>td:nth-child(2)`)}
+
+    get getTableNumberOfRows(){return $$('tbody tr')}
 
     get checkingSearchInput(){ return $('[type="search"]') }
 

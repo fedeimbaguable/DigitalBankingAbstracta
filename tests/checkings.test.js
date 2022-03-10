@@ -5,13 +5,14 @@ import CheckingPageTable from "../pages/CheckingPageTable";
 import CorrectCheckings from "../datos/CorrectCheckings";
 import IncorrectCheckings from "../datos/IncorrectCheckings"
 
-beforeEach(async () => {
-    await SignIn.open('bank');
-    let username = 'jsmith@demo.io';
-    let password = 'Demo123!';
-    await SignIn.logIn(username, password);
-});
+
 describe('Checkings', () => {
+beforeEach(async () => {
+        await SignIn.open('bank/login');
+        let username = 'jsmith@demo.io';
+        let password = 'Demo123!';
+        await SignIn.logIn(username, password);
+});
 it('Should take you to Checkings form', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessNewCheckingForm()
@@ -34,14 +35,21 @@ it('Should see the three pages going forwards and backwards', async ()=> {
     await CheckingPageTable.changeCheckingTransactionsTablePrevious()
     await expect(CheckingPageTable.checkingTableTextInfo).toHaveText('Showing 1 to 10 of 24 entries')
 })
-it('Should filter the table with the word "Income"', async ()=> {
-    await HomePage.displayCheckingMenu() 
-    await HomePage.accessViewCheckingTable()
-    await CheckingPageTable.sendText(CheckingPageTable.checkingSearchInput, 'Income')
-    const rows = await $$('#transactionTable tr');
-    const columns = await rows[1,2,3,4].$$('td');
-    await expect(columns[1]).toHaveText('Income'); 
-})
+//it('Should filter the table with the word "Income"', async ()=> {
+//    await HomePage.displayCheckingMenu() 
+//    await HomePage.accessViewCheckingTable()
+//    await CheckingPageTable.sendText(CheckingPageTable.checkingSearchInput, 'Income')
+//    const row = await $$('#transactionTable tr');
+//    let tableLength = await CheckingPage.getTableNumberOfRows();
+//    let cell;
+//    for(let i=0; i< rowsLength; i++){
+//    cell = await CheckingPage.getCellFromForRow(i);
+//    await expect(cell).toHaveTextContaining("Income");
+//}
+ //   
+ //   const columns = await rows[1,2,3,4].$$('td');
+  //  await expect(columns[1]).toHaveText('Income'); 
+//})
 it('Should reset the account creation form when clicking reset', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessNewCheckingForm()
@@ -57,13 +65,12 @@ CorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
         await expect(CheckingPageTable.newCheckingConfirmation).toBeDisplayed()
     })
     });
-
-//it('Should switch checking', async ()=> {
-  //  await HomePage.displayCheckingMenu() 
-  //  await HomePage.accessViewCheckingForm()
-  //  await CheckingPageTable.activateSwitchChecking()
-  //  await expect(CheckingPageTable.checkingBody).toBeDisplayed()
-//})
+it('Should switch checking', async ()=> {
+    await HomePage.displayCheckingMenu() 
+    await HomePage.accessViewCheckingTable()
+    await CheckingPageTable.activateSwitchChecking()
+    await expect(CheckingPageTable.switchChecked).toHaveAttribute('checked', 'true')
+})
 IncorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
 it(`Should not create a checking ${reason}`, async ()=> {
     await HomePage.displayCheckingMenu() 

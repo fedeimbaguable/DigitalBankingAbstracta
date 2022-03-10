@@ -104,7 +104,7 @@ Expected Result: Take us to the Bank's view checking form.
 Obtained Result: The webapp took us to the view checkings form.
 
 12)
-Title : Should reset the data.
+Title : Should reset the account creation form when clicking reset.
 Description: We go to the new checkings form type data in the names input and then reset.
 Date: 08/03/2022
 Functionality: Reset the new checkings form.
@@ -117,7 +117,7 @@ Title : Should create a Standard Individual Checking.
 Description:  We go to the new checkings form select the options Standard and Individual, type data in the inputs and submit.
 Date: 08/03/2022
 Functionality: Create a checking.
-Input data and actions: We select the Standard and Individual options by clicking them, then we type the name of the checking and the deposit amount: Standard Individual Checking-25 and submit the form.
+Input data and actions: We select the Standard and Individual options by clicking them, then we type the name of the checking and the deposit amount: Standard Individual-25 and submit the form.
 Expected Result: Create a Standard and indiviudal checking with a deposit of 25.
 Obtained Result: The checking was created correctly.
 
@@ -126,7 +126,7 @@ Title : Should create a Standard Joint Checking.
 Description:  We go to the new checkings form select the options Standard and joint, type data in the inputs and submit.
 Date: 08/03/2022
 Functionality: Create a checking.
-Input data and actions: We select the Standard and Joint options by clicking them, then we type the name of the checking and the deposit amount: Standard Joint Checking-50.47 and submit the form.
+Input data and actions: We select the Standard and Joint options by clicking them, then we type the name of the checking and the deposit amount: Standard Joint-50.47 and submit the form.
 Expected Result: Create a standard and joint checking with a deposit of 50.47.
 Obtained Result: The checking was created correctly.
 
@@ -135,7 +135,7 @@ Title : Should create a Interest Individual Checking.
 Description:  We go to the new checkings form select the options Interest and Individual, type data in the inputs and submit.
 Date: 08/03/2022
 Functionality: Create a checking.
-Input data and actions: We select the Interest and Individual options by clicking them, then we type the name of the checking and the deposit amount: Interest Individual Checking-1000000 and submit the form.
+Input data and actions: We select the Interest and Individual options by clicking them, then we type the name of the checking and the deposit amount: Interest Individual-1000000 and submit the form.
 Expected Result: Create a interest and indiviudal checking with a deposit of 1000000.
 Obtained Result: The checking was created correctly.
 
@@ -144,7 +144,7 @@ Title : Should create a Interest Joint Checking.
 Description:  We go to the new checkings form select the options Interest and Joint, type data in the inputs and submit.
 Date: 08/03/2022
 Functionality: Create a checking.
-Input data and actions: We select the Interest and Joint options by clicking them, then we type the name of the checking and the deposit amount: Interest Joint Checking-10000000 and submit the form.
+Input data and actions: We select the Interest and Joint options by clicking them, then we type the name of the checking and the deposit amount: Interest Joint-10000000 and submit the form.
 Expected Result: Create a interest and joint checking with a deposit of 10000000.
 Obtained Result: The checking was created correctly.
 
