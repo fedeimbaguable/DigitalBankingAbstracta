@@ -24,12 +24,15 @@ it('Should take you to Savings View', async ()=> {
     await expect(SavingsTable.savingTitle).toHaveText('View Savings Accounts')
 })
 //it('Should filter the table with the word "Interest"', async ()=> {
-//    await HomePage.displaySavingsMenu() 
-//    await HomePage.accessViewSavingsTable()
-//    await SavingsTable.sendText(SavingsTable.savingSearchInput, 'Interest')
-//    const rows = await $$('#transactionTable tr');
-//    const columns = await rows[1,2,3,4,5,6].$$('td');
-//    await expect(columns[2]).toHaveTextContaining('Interest'); 
+ //   await HomePage.displayCheckingMenu() 
+ //   await HomePage.accessViewCheckingTable()
+ //   await SavingsTable.sendText(SavingsTable.savingSearchInput, 'Interest')
+ //   let tableLength = await SavingsTable.getTableNumberOfRows();
+ //   let cell;
+ //   for(let i=1; i<= tableLength; i++){
+ //   cell = await SavingsTable.getCellFromRow(i);
+ //   await expect(cell).toHaveTextContaining("Interest");
+//} 
 //})
 it('Should reset the account creation form when clicking reset', async ()=> {
     await HomePage.displaySavingsMenu() 

@@ -12,6 +12,16 @@ class SavingsTable extends BasePage {
 
     get savingTitle () { return $('#page-title') }
 
+    async getCellFromRow(row){
+        return $(`#transactionTable>tbody>tr:nth-child(${row})>td:nth-child(3)`)
+    }
+
+    async getTableNumberOfRows(){
+        let rows = await $$("tbody > tr");
+        return rows.length
+    }
+
+
     async activateSwitchSaving (){
         await this.switchSaving.click()
     }
