@@ -35,7 +35,7 @@ it('Should see the three pages going forwards and backwards', async ()=> {
     await CheckingPageTable.changeCheckingTransactionsTablePrevious()
     await expect(CheckingPageTable.checkingTableTextInfo).toHaveText('Showing 1 to 10 of 24 entries')
 })
-it.only('Should filter the table with the word "Income"', async ()=> {
+it('Should filter the table with the word "Income"', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessViewCheckingTable()
     await CheckingPageTable.sendText(CheckingPageTable.checkingSearchInput, 'Income')
