@@ -14,9 +14,14 @@ class CheckingPageTable extends BasePage {
 
     get checkingTableTextInfo(){return $('#transactionTable_info')}
 
-    get getCellFromForRow(){return $(`#transactionTable>tbody>tr:nth-child(${row})>td:nth-child(2)`)}
+    async getCellFromRow(row){
+        return $(`#transactionTable>tbody>tr:nth-child(${row})>td:nth-child(2)`)
+    }
 
-    get getTableNumberOfRows(){return $('tbody')}
+    async getTableNumberOfRows(){
+        let rows = await $$("tbody > tr");
+        return rows.length
+    }
 
     get checkingSearchInput(){ return $('[type="search"]') }
 
