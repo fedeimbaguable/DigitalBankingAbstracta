@@ -190,8 +190,13 @@ Description:Go to the view checkings page and change the checking we are looking
 Date: 08/03/2022
 Functionality: Change the checking we are viewing.
 Input data and actions: We click on checking and aftwerwards on view checking, once we are in the view checking page we click on the button of the card we want to see.
+<<<<<<< HEAD
 Expected Result: Take us to the Bank's view checking page and change the checking view.
 Obtained Result: The webapp took us to the view checkings page and we changed the checking we were looking at.
+=======
+Expected Result: Take us to the Bank's view checking form and change the check view.
+Obtained Result: The webapp took us to the view checkings form and we changed the check we were looking at.
+>>>>>>> f9943a293b665c459a747fcd7279c64ef94f08a6
 
 22)
 Title : Should change the page.
@@ -209,6 +214,7 @@ Date: 08/03/2022
 Functionality: Filter the checking we are viewing.
 Input data and actions: Once we are in the view checking page we type the word "income" in the search input to filter this word.
 Expected Result: Filter the table with the word income.
+<<<<<<< HEAD
 Obtained Result: We could filter the table with the word income correctly.
 
 24)
@@ -327,3 +333,6 @@ Functionality: Change the savings we are viewing.
 Input data and actions: We click on savings and aftwerwards on view savings, once we are in the view savings page we click on the button of the card we want to see.
 Expected Result: Take us to the Bank's view savings page and change the saving view.
 Obtained Result: The webapp took us to the view savings page and we changed the check we were looking at.
+=======
+Obtained Result: We could filter the table with the word income correctly.
+>>>>>>> f9943a293b665c459a747fcd7279c64ef94f08a6
