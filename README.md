@@ -28,4 +28,4 @@ docker-compose -f docker-compose-postgres.yml down
 
 2) In VSC open a new terminal
 
-3) Type the command: npm run test 
+3) Type the command: npm run test to run the whole test. (to run only the login use: npm run login and to run only the checkings: npm run checking)

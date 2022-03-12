@@ -13,9 +13,9 @@ export default class BasePage {
    * Esperar a que un elemento sea clickeable y hacer click
    * @param {Object} elemento a clickear
    */
-  async clickearElemento(elemento) {
-      await elemento.waitForClickable({ timeout: PAGE_TIMEOUT });
-      await elemento.click();
+  async clickElement(element) {
+      await element.waitForClickable({ timeout: PAGE_TIMEOUT });
+      await element.click();
   }
 
   async getBrowserCookies() {
