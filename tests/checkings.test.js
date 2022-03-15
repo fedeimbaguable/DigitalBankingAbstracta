@@ -4,6 +4,7 @@ import CheckingPageForm from "../pages/CheckinPageForm"
 import CheckingPageTable from "../pages/CheckingPageTable";
 import CorrectCheckings from "../datos/CorrectCheckings";
 import IncorrectCheckings from "../datos/IncorrectCheckings"
+import AccountForm from "../pages/AccountForm"
 
 
 describe('Checkings', () => {
@@ -13,10 +14,10 @@ beforeEach(async () => {
         let password = 'Demo123!';
         await SignIn.logIn(username, password);
 });
-it('Should take you to Checkings form', async ()=> {
+it.only('Should take you to Checkings form', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessNewCheckingForm()
-    await expect(CheckingPageForm.checkingTitle).toHaveText('Create Checking')
+    await expect(AccountForm.formTitle).toHaveText('Create Checking')
 })
 it('Should take you to Checkings View', async ()=> {
     await HomePage.displayCheckingMenu() 

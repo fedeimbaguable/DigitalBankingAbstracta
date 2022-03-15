@@ -85,6 +85,8 @@ Input data and actions: We introduce a correct username and password : jsmith@de
 Expected Result: Let us sign in and take us to the Bank's personal dashboard and when analyzing the cookies to see the user remembered, as cookies are set in one by default in this browser if after doing the test the number of cookies was more than one the browser remembered us correctly.
 Obtained Result: The webapp took us to the dashboard allowing us the access it was expected and the result in the cookies was, that cookies had a length bigger than one, so the browser remembered us.
 
+Moreover, now we are going to do the tests regarding the checking and savings page which are very similar.
+
 10)
 Title : Should take you to Checkings form.
 Description: We sign in to the account and then go to the new checkings form.
@@ -190,13 +192,8 @@ Description:Go to the view checkings page and change the checking we are looking
 Date: 08/03/2022
 Functionality: Change the checking we are viewing.
 Input data and actions: We click on checking and aftwerwards on view checking, once we are in the view checking page we click on the button of the card we want to see.
-<<<<<<< HEAD
 Expected Result: Take us to the Bank's view checking page and change the checking view.
 Obtained Result: The webapp took us to the view checkings page and we changed the checking we were looking at.
-=======
-Expected Result: Take us to the Bank's view checking form and change the check view.
-Obtained Result: The webapp took us to the view checkings form and we changed the check we were looking at.
->>>>>>> f9943a293b665c459a747fcd7279c64ef94f08a6
 
 22)
 Title : Should change the page.
@@ -214,7 +211,6 @@ Date: 08/03/2022
 Functionality: Filter the checking we are viewing.
 Input data and actions: Once we are in the view checking page we type the word "income" in the search input to filter this word.
 Expected Result: Filter the table with the word income.
-<<<<<<< HEAD
 Obtained Result: We could filter the table with the word income correctly.
 
 24)
@@ -333,6 +329,113 @@ Functionality: Change the savings we are viewing.
 Input data and actions: We click on savings and aftwerwards on view savings, once we are in the view savings page we click on the button of the card we want to see.
 Expected Result: Take us to the Bank's view savings page and change the saving view.
 Obtained Result: The webapp took us to the view savings page and we changed the check we were looking at.
-=======
-Obtained Result: We could filter the table with the word income correctly.
->>>>>>> f9943a293b665c459a747fcd7279c64ef94f08a6
+
+To continue with the automation, now we are going to test the deposit and withdraw sections. They are also very similar.
+
+37) 
+Title : Should take you to Deposit form.
+Description: We sign in to the account and then go to the deposit form.
+Date: 15/03/2022
+Functionality: Take us to the deposit form.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit".
+Expected Result: Let us sign in and take us to the Bank's deposit form.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form.
+
+38) 
+Title : Should show a balance when selecting the account Individual Checking
+Description: We sign in to the account and then go to the deposit form and select the Individual Checking account.
+Date: 15/03/2022
+Functionality: Show us the balance in the deposit form.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", and select the account Individual Checking.
+Expected Result: Let us sign in, take us to the Bank's deposit form and after clicking the account show us the balance.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, after clicking the account it displayed the balance correctly.
+
+38) 
+Title : Should show a balance when selecting the account Individual Savings
+Description: We sign in to the account and then go to the deposit form and select the Individual Savings account.
+Date: 15/03/2022
+Functionality: Show us the balance in the deposit form.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", and select the account Individual Savings.
+Expected Result: Let us sign in, take us to the Bank's deposit form and after clicking the account show us the balance.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, after clicking the account it displayed the balance correctly.
+
+39) 
+Title : Should reset the information of the Deposit Form.
+Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button reset.
+Date: 15/03/2022
+Functionality: Reset the data of a new deposit.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Checking,introduce $10 dollars and reset.
+Expected Result: Let us sign in and take us to the Bank's deposit form, and reset the data.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and reset the data correctly.
+
+40) 
+Title : Should Create a deposit in the account Individual Checking of 1.57 dollars.
+Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
+Date: 15/03/2022
+Functionality: Create a new deposit.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Checking,introduce $1.57 dollars and submit.
+Expected Result: Let us sign in and take us to the Bank's deposit form, create the deposit and take us to the Checking page and see the deposit in the table.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, created the deposit and took us to the checking page table where we could see the deposit.
+
+41) 
+Title : Should Create a deposit in the account Individual Checking of 1,000,000 dollars.
+Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
+Date: 15/03/2022
+Functionality: Create a new deposit.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Checking,introduce $1,000,000 dollars and submit.
+Expected Result: Let us sign in and take us to the Bank's deposit form, create the deposit and take us to the Checking page and see the deposit in the table.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, created the deposit and took us to the checking page table where we could see the deposit.
+
+42) 
+Title : Should Create a deposit in the account Individual Savings of 1.57 dollars.
+Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
+Date: 15/03/2022
+Functionality: Create a new deposit.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Savings,introduce $1.57 dollars and submit.
+Expected Result: Let us sign in and take us to the Bank's deposit form, create the deposit and take us to the savings page and see the deposit in the table.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, created the deposit and took us to the savings page table where we could see the deposit.
+
+43) 
+Title : Should Create a deposit in the account Individual Savings of 1,000,000 dollars.
+Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
+Date: 15/03/2022
+Functionality: Create a new deposit.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Savings,introduce $1,000,000 dollars and submit.
+Expected Result: Let us sign in and take us to the Bank's deposit form, create the deposit and take us to the savings page and see the deposit in the table.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, created the deposit and took us to the savings page table where we could see the deposit.
+
+44) 
+Title : Should not create a deposit because the deposit input was in blank.
+Description: We sign in to the account and then go to the deposit form, we select the account Individual Savings and don't type data in the input, afterwards we click the button submit.
+Date: 15/03/2022
+Functionality: Should not create a new deposit.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the account Individual Savings,leave in blank the input and submit.
+Expected Result: Let us sign in and take us to the Bank's deposit form, and don't create a deposit.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and did'nt create a deposit.
+
+45) 
+Title : Should not create a deposit because the account was not selected.
+Description: We sign in to the account and then go to the deposit form, we don't select the account and type data in the input, afterwards we click the button submit.
+Date: 15/03/2022
+Functionality: Should not create a new deposit.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we don't select the account,introduce $10 dollars and submit.
+Expected Result: Let us sign in and take us to the Bank's deposit form, and don't create a deposit.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and did'nt create a deposit.
+
+46)  
+Title : Should not create a deposit because the deposit input was in negative numbers.
+Description: We sign in to the account and then go to the deposit form, we select the account Individual Savings and type data in the input, afterwards we click the button submit.
+Date: 15/03/2022
+Functionality: Should not create a new deposit.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the account Individual Savings,introduce "-10" in the deposit input and submit.
+Expected Result: Let us sign in and take us to the Bank's deposit form, and don't create a deposit.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and did'nt create a deposit.
+
+47)  
+Title : Should not create a deposit because the deposit input was in letters.
+Description: We sign in to the account and then go to the deposit form, we select the account Individual Savings and type data in the input, afterwards we click the button submit.
+Date: 15/03/2022
+Functionality: Should not create a new deposit.
+Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the account Individual Savings,introduce "aa" in the deposit input and submit.
+Expected Result: Let us sign in and take us to the Bank's deposit form, and don't create a deposit.
+Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and did'nt create a deposit.
