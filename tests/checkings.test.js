@@ -14,10 +14,10 @@ beforeEach(async () => {
         let password = 'Demo123!';
         await SignIn.logIn(username, password);
 });
-it.only('Should take you to Checkings form', async ()=> {
+it('Should take you to Checkings form', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessNewCheckingForm()
-    await expect(AccountForm.formTitle).toHaveText('Create Checking')
+    await expect(CheckingPageForm.checkingFormTitle).toHaveText('Create Checking')
 })
 it('Should take you to Checkings View', async ()=> {
     await HomePage.displayCheckingMenu() 

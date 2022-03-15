@@ -9,16 +9,5 @@ class AccountForm extends BasePage {
     get nameInput (){return $('#name')}
   
     get depositInput (){return $('#openingBalance')}
-
-    get newErrorText () {return $('#new-account-error-msg')}
-
-    get formTitle () { return $('#page-title') }
-
-    async chooseIndividual () {
-        await this.individualButton.click()
-    }
-    async chooseJoint () {
-        await this.jointButton.click()
-    }
 }
 export default AccountForm;

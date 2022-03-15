@@ -1,18 +1,12 @@
-import BasePage from './BasePage';
+import AccountForm from './AccountForm';
 
-class SavingsForm extends BasePage {
+class SavingsForm extends AccountForm {
 
     get savingsSavingsButton (){return $('label[for="Savings"]')}
 
     get moneyMarketSavingsButton (){return $('label[for="Money Market"]')}
   
-    get individualSavingsButton (){return $('#Individual')}
-  
-    get jointSavingsButton (){return $('#Joint')}
-  
     get savingsNameInput (){return $('#name')}
-  
-    get savingsDepositInput (){return $('#openingBalance')}
   
     get newSavingsFormSubmitButton () {return $('#newSavingsSubmit')}
 
@@ -25,9 +19,9 @@ class SavingsForm extends BasePage {
 
     async createSaving (type, ownership, name, amount){
         await super.clickElement(type === "savings" ? await this.savingsSavingsButton : await this.moneyMarketSavingsButton);
-        await super.clickElement(ownership === "individual" ? await this.individualSavingsButton : await this.jointSavingsButton);
-        await super.sendText (this.savingsNameInput, name);
-        await super.sendText (this.savingsDepositInput, amount);
+        await super.clickElement(ownership === "individual" ? await this.individualButton : await this.jointButton);
+        await super.sendText (this.nameInput, name);
+        await super.sendText (this.depositInput, amount);
         await super.clickElement(this.newSavingsFormSubmitButton);
       }
 
@@ -37,11 +31,11 @@ class SavingsForm extends BasePage {
     async chooseMoneyMarket () {
         await this.moneyMarketSavingsButton.click()
     }
-    async chooseIndividualSavings () {
-        await this.individualSavingsButton.click()
+    async chooseIndividual () {
+        await this.individualButton.click()
     }
-    async chooseJointSavings () {
-        await this.jointSavingsButton.click()
+    async chooseJoint () {
+        await this.jointButton.click()
     }
     async savingsReset (){
         await this.newSavingsFormResetButton.click()
