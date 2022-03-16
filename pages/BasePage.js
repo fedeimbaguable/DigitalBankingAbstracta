@@ -1,6 +1,8 @@
 const PAGE_TIMEOUT = 10000
 export default class BasePage {
 
+  get pageTitle () { return $('#page-title') }
+
   /**
    * Abrir página
    * @param {String} ruta a la cual acceder
