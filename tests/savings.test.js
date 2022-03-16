@@ -6,22 +6,23 @@ import CorrectSavings from "../datos/CorrectSavings";
 import IncorrectCheckings from "../datos/IncorrectSavings"
 
 
+
+describe('Savings', () => {
 beforeEach(async () => {
     await SignIn.open('bank/login');
     let username = 'jsmith@demo.io';
     let password = 'Demo123!';
     await SignIn.logIn(username, password);
 });
-describe('Savings', () => {
 it('Should take you to Savings form', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessNewSavingsForm()
-    await expect(SavingsForm.formTitle).toHaveText('Create Savings')
+    await expect(SavingsForm.pageTitle).toHaveText('Create Savings')
 })
 it('Should take you to Savings View', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessViewSavingsTable()
-    await expect(SavingsTable.tableTitle).toHaveText('View Savings Accounts')
+    await expect(SavingsTable.pageTitle).toHaveText('View Savings Accounts')
 })
 it('Should filter the table with the word "Interest"', async ()=> {
     await HomePage.displaySavingsMenu() 

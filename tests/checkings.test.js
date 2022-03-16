@@ -17,12 +17,12 @@ beforeEach(async () => {
 it('Should take you to Checkings form', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessNewCheckingForm()
-    await expect(CheckingPageForm.formTitle).toHaveText('Create Checking')
+    await expect(CheckingPageForm.pageTitle).toHaveText('Create Checking')
 })
 it('Should take you to Checkings View', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessViewCheckingTable()
-    await expect(CheckingPageTable.tableTitle).toHaveText('View Checking Accounts')
+    await expect(CheckingPageTable.pageTitle).toHaveText('View Checking Accounts')
 })
 it('Should see the three pages going forwards and backwards', async ()=> {
     await HomePage.displayCheckingMenu() 
