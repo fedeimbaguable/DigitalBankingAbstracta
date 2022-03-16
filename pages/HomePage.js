@@ -11,6 +11,8 @@ class HomePage extends BasePage {
 
   get newCheckingForm () {return $('#new-checking-menu-item')};
 
+  get newDepositForm () {return $('#deposit-menu-item')};
+
   get checkingMenu () {return $('#checking-menu')};
 
   get viewCheckingTable () {return $('#view-checking-menu-item')};
@@ -26,6 +28,9 @@ class HomePage extends BasePage {
   }
   async displaySavingsMenu () {
     await this.savingsMenu.click()
+  }
+  async accessNewDepositForm () {
+    await this.newDepositForm.click()
   }
   async accessNewSavingsForm () {
     await this.newSavingsForm.click()

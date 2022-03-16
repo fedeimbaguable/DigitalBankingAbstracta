@@ -637,15 +637,11 @@ Pre-condition:Exists a user
 
 Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
 
-
 Date: 15/03/2022
-
 
 Functionality: Create a new deposit.
 
-
 Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Checking,introduce $1.57 dollars and submit.
-
 
 Expected Result: Let us sign in and take us to the Bank's deposit form, create the deposit and take us to the Checking page and see the deposit in the table.
 
