@@ -1,8 +1,6 @@
-import BasePage from './BasePage';
+import AccountTable from './AccountTable';
 
-class CheckingPageTable extends BasePage {
-    
-    get newCheckingConfirmation () {return $('#new-account-conf-alert')}
+class CheckingPageTable extends AccountTable {
 
     get switchChecking () { return $('//*[contains(text(),"Individual Checking")]//ancestor::div[@class="card-body"]//span[@class="switch-handle"]')}
 
@@ -17,16 +15,6 @@ class CheckingPageTable extends BasePage {
     async getCellFromRow(row){
         return $(`#transactionTable>tbody>tr:nth-child(${row})>td:nth-child(2)`)
     }
-
-    async getTableNumberOfRows(){
-        let rows = await $$("tbody > tr");
-        return rows.length
-    }
-
-    get checkingSearchInput(){ return $('[type="search"]') }
-
-    get checkingTitle () { return $('#page-title') }
-
     async changeCheckingTransactionsTableNext(){
         await this.checkingTransactionsTableNextButton.click()
     }
