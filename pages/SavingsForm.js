@@ -6,15 +6,9 @@ class SavingsForm extends AccountForm {
 
     get moneyMarketSavingsButton (){return $('label[for="Money Market"]')}
   
-    get savingsNameInput (){return $('#name')}
-  
     get newSavingsFormSubmitButton () {return $('#newSavingsSubmit')}
 
     get newSavingsFormResetButton () {return $('#newSavingsReset')}
-
-    get newSavingsErrorText () {return $('#new-account-error-msg')}
-
-    get savingsTitle () { return $('#page-title') }
 
 
     async createSaving (type, ownership, name, amount){
@@ -24,19 +18,6 @@ class SavingsForm extends AccountForm {
         await super.sendText (this.depositInput, amount);
         await super.clickElement(this.newSavingsFormSubmitButton);
       }
-
-    async chooseSavings () {
-        await this.savingsSavingsButton.click()
-    }
-    async chooseMoneyMarket () {
-        await this.moneyMarketSavingsButton.click()
-    }
-    async chooseIndividual () {
-        await this.individualButton.click()
-    }
-    async chooseJoint () {
-        await this.jointButton.click()
-    }
     async savingsReset (){
         await this.newSavingsFormResetButton.click()
     }

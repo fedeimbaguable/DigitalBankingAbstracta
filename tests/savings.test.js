@@ -16,17 +16,17 @@ describe('Savings', () => {
 it('Should take you to Savings form', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessNewSavingsForm()
-    await expect(SavingsForm.savingsTitle).toHaveText('Create Savings')
+    await expect(SavingsForm.formTitle).toHaveText('Create Savings')
 })
 it('Should take you to Savings View', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessViewSavingsTable()
-    await expect(SavingsTable.savingTitle).toHaveText('View Savings Accounts')
+    await expect(SavingsTable.tableTitle).toHaveText('View Savings Accounts')
 })
 it('Should filter the table with the word "Interest"', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessViewSavingsTable()
-    await SavingsTable.sendText(SavingsTable.savingSearchInput, 'Interest')
+    await SavingsTable.sendText(SavingsTable.searchTableInput, 'Interest')
     let tableLength = await SavingsTable.getTableNumberOfRows();
     let cell;
     for(let i=1; i<= tableLength; i++){
@@ -37,16 +37,16 @@ it('Should filter the table with the word "Interest"', async ()=> {
 it('Should reset the account creation form when clicking reset', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessNewSavingsForm()
-    await SavingsForm.sendText(SavingsForm.savingsNameInput, '1234')
+    await SavingsForm.sendText(SavingsForm.nameInput, '1234')
     await SavingsForm.savingsReset()
-    await expect(SavingsForm.savingsNameInput).toHaveText('')
+    await expect(SavingsForm.nameInput).toHaveText('')
 })
 CorrectSavings.forEach(({type, ownership, name, amount, reason}) => {
     it(`Should create a  ${reason}`, async () => {
         await HomePage.displaySavingsMenu() 
         await HomePage.accessNewSavingsForm()
         await SavingsForm.createSaving(type, ownership, name, amount)
-        await expect(SavingsTable.newSavingConfirmation).toBeDisplayed()
+        await expect(SavingsTable.newConfirmationText).toBeDisplayed()
     })
     });
 it('Should switch checking', async ()=> {

@@ -9,5 +9,9 @@ class AccountForm extends BasePage {
     get nameInput (){return $('#name')}
   
     get depositInput (){return $('#openingBalance')}
+
+    get formTitle () { return $('#page-title') }
+
+    get newErrorText () {return $('#new-account-error-msg')}
 }
 export default AccountForm;
