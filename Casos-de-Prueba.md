@@ -20,6 +20,8 @@ Expected Result: Get an error from the sistem and dont let us sign in.
 2)
 Title : Sign In denied because user user and password do not match.
 
+Pre-condition: 
+
 Description: We introduce incorrect data in the password but a correct username to try if the inputs are reading data correctly expecting the software answers with an error and dont let us sign in.
 
 Date: 01/03/2022
@@ -33,6 +35,8 @@ Expected Result: Get an error from the sistem and dont let us sign in.
 3)
 Title : Sign In denied because data was not received.
 
+Pre-condition: 
+
 Description: We dont introduce data in username and password inputs expecting the software answers with an error and dont let us sign in.
 
 Date: 01/03/2022
@@ -45,6 +49,8 @@ Expected Result: Get an error from the sistem and dont let us sign in.
 
 4)
 Title : Sign In denied because username was not received.
+
+Pre-condition: 
 
 Description: We dont introduce data in the username input expecting the username input to work correcty and the software answers with an error and dont let us sign in.
 
@@ -60,6 +66,8 @@ Expected Result: Get an error from the sistem and dont let us sign in.
 5)
 Title : Sign In denied because username was not received.
 
+Pre-condition: 
+
 Description: We dont introduce data in the password input expecting the password input to work correcty and the software answers with an error and dont let us sign in.
 
 Date: 01/03/2022
@@ -72,6 +80,8 @@ Expected Result: Get an error from the sistem and dont let us sign in.
 
 6)
 Title : Sign In correctly with a user already created.
+
+Pre-condition: Exists a user.
 
 Description: We introduce data in the username and password inputs expecting the software to let us sign in, then we log out.
 
@@ -88,6 +98,8 @@ After we tested the sign in form we are testing the two links which one takes yo
 7)
 Title : Should take us to the sign in form.
 
+Pre-condition:
+
 Description: We introduce data in the username input and then we click on the logo of Digital Bank expecting it to refresh the browser and take us to a blank sign in form.
 
 Date: 01/03/2022
@@ -100,6 +112,8 @@ Expected Result: Take us to a new sign in form with blank inputs.
 
 8)
 Title : Should take us to the sign up form.
+
+Pre-condition: 
 
 Description: We click on the "Sign Up Here" link expecting the browser to take us to the sign up form and then click in the logo again to take us back to the sign in form.
 
@@ -114,10 +128,11 @@ Expected Result: Take us to a new sign un form and then to a sign in form with b
 9)
 Title : Sign In correctly clicking the remember me checkbox.
 
+Pre-condition: Exists a user.
+
 Description: We introduce data in the username and password inputs and click the remember me checkbox expecting the software to let us sign in and the the cookies to remember us correctly.
 
 Date: 01/03/2022
-
 
 Functionality: Remember the user.
 
@@ -129,6 +144,8 @@ Moreover, now we are going to do the tests regarding the checking and savings pa
 
 10)
 Title : Should take you to Checkings form.
+
+Pre-condition: Exists a user.
 
 Description: We sign in to the account and then go to the new checkings form.
 
@@ -143,6 +160,8 @@ Expected Result: Let us sign in and take us to the Bank's new checking form.
 11)
 Title : Should take you to View Checkings form.
 
+Pre-condition: Exists a user.
+
 Description:Go to the view checkings page.
 
 Date: 08/03/2022
@@ -155,6 +174,8 @@ Expected Result: Take us to the Bank's view checking form.
 
 12)
 Title : Should reset the account creation form when clicking reset.
+
+Pre-condition: Exists a user.
 
 Description: We go to the new checkings form type data in the names input and then reset.
 
@@ -169,6 +190,8 @@ Expected Result: Reset the new checkings form.
 13)
 Title : Should create a Standard Individual Checking.
 
+Pre-condition: Exists a user.
+
 Description:  We go to the new checkings form select the options Standard and Individual, type data in the inputs and submit.
 
 Date: 08/03/2022
@@ -182,10 +205,11 @@ Expected Result: Create a Standard and indiviudal checking with a deposit of 25.
 14)
 Title : Should create a Standard Joint Checking.
 
+Pre-condition: Exists a user.
+
 Description:  We go to the new checkings form select the options Standard and joint, type data in the inputs and submit.
 
 Date: 08/03/2022
-
 
 Functionality: Create a checking.
 
@@ -196,6 +220,7 @@ Expected Result: Create a standard and joint checking with a deposit of 50.47.
 15)
 Title : Should create a Interest Individual Checking.
 
+Pre-condition: Exists a user.
 
 Description:  We go to the new checkings form select the options Interest and Individual, type data in the inputs and submit.
 
@@ -210,6 +235,8 @@ Expected Result: Create a interest and indiviudal checking with a deposit of 100
 16)
 Title : Should create a Interest Joint Checking.
 
+Pre-condition: Exists a user.
+
 Description:  We go to the new checkings form select the options Interest and Joint, type data in the inputs and submit.
 
 Date: 08/03/2022
@@ -222,6 +249,8 @@ Expected Result: Create a interest and joint checking with a deposit of 10000000
 
 17)
 Title : Should not create a checking because the deposit is less than 25.
+
+Pre-condition: Exists a user.
 
 Description:  We go to the new checkings form select the options Standard and Individual, type data in the inputs and submit.
 
@@ -236,6 +265,8 @@ Expected Result: Should keep on the page and dont redirect us to the table with 
 18)
 Title : Should not create a checking because the deposit is in negative numbers.
 
+Pre-condition: Exists a user.
+
 Description:  We go to the new checkings form select the options Standard and Joint, type data in the inputs and submit.
 
 Date: 08/03/2022
@@ -248,6 +279,8 @@ Expected Result: Should keep on the page and dont redirect us to the table with 
 
 19)
 Title : Should not create a checking because the deposit is letters.
+
+Pre-condition: Exists a user.
 
 Description:  We go to the new checkings form select the options Interest and Individual, type data in the inputs and submit.
 
@@ -262,6 +295,8 @@ Expected Result: Should keep on the page and dont redirect us to the table with 
 20)
 Title : Should not create a checking because the deposit is blank.
 
+Pre-condition: Exists a user.
+
 Description:  We go to the new checkings form select the options Interest and Joint, type data in the inputs and submit.
 
 Date: 08/03/2022
@@ -274,6 +309,11 @@ Expected Result: Should keep on the page and dont redirect us to the table with 
 
 21)
 Title : Should switch checking.
+
+Pre-condition: 
+
+1)Exists a user
+2)Exists two or more checkings.
 
 Description:Go to the view checkings page and change the checking we are looking at.
 
@@ -288,6 +328,11 @@ Expected Result: Take us to the Bank's view checking page and change the checkin
 22)
 Title : Should change the page.
 
+Pre-condition: 
+
+1)Exists a user
+2)Exists a checking with 20 or more transactions
+
 Description:Go to the view checkings page and change the pages of the table of transaction forwards and then backwards.
 
 Date: 08/03/2022
@@ -300,6 +345,11 @@ Expected Result: Change the pages forwards and backwards.
 
 23)
 Title : Should filter the table.
+
+Pre-condition: 
+
+1)Exists a user
+2)Exists a checking with more than one category
 
 Description:Go to the view checkings page and filter the table of transaction.
 
@@ -314,6 +364,8 @@ Expected Result: Filter the table with the word income.
 24)
 Title : Should take you to Savings form.
 
+Pre-condition: Exists a user
+
 Description: We sign in to the account and then go to the new savings form.
 
 Date: 10/03/2022
@@ -326,6 +378,8 @@ Expected Result: Let us sign in and take us to the Bank's new savings form.
 
 25)
 Title : Should take you to View Savings form.
+
+Pre-condition: Exists a user
 
 Description:Go to the view savings page.
 
@@ -340,6 +394,11 @@ Expected Result: Take us to the Bank's view savings form.
 26)
 Title : Should filter the table.
 
+Pre-condition: 
+
+1)Exists a user
+2)Exists a checking with more than one category
+
 Description:Go to the view savings page and filter the table of transaction.
 
 Date: 10/03/2022
@@ -352,6 +411,8 @@ Expected Result: Filter the table with the word interest.
 
 27)
 Title : Should reset the account creation form when clicking reset.
+
+Pre-condition: Exists a user
 
 Description: We go to the new savings form type data in the names input and then reset.
 
@@ -366,6 +427,8 @@ Expected Result: Reset the new savings form.
 28)
 Title : Should create a Savings Individual Savings.
 
+Pre-condition: Exists a user
+
 Description:  We go to the new savings form select the options Savings and Individual, type data in the inputs and submit.
 
 Date: 10/03/2022
@@ -378,6 +441,8 @@ Expected Result: Create a Savings and Indiviudal saving with a deposit of 25.
 
 29)
 Title : Should create a Savings Joint Saving.
+
+Pre-condition: Exists a user
 
 Description:  We go to the new savings form select the options Savings and Joint, type data in the inputs and submit.
 
@@ -392,6 +457,8 @@ Expected Result: Create a Savings and Joint saving with a deposit of 50.47.
 30)
 Title : Should create a Money Market Individual Saving.
 
+Pre-condition: Exists a user
+
 Description:  We go to the new savings form select the options Money Market and Individual, type data in the inputs and submit.
 
 Date: 10/03/2022
@@ -404,6 +471,8 @@ Expected Result: Create a Money Market and indiviudal saving with a deposit of 1
 
 31)
 Title : Should create a Money Market Joint Saving.
+
+Pre-condition: Exists a user
 
 Description:  We go to the new savings form select the options Money Market and Joint, type data in the inputs and submit.
 
@@ -418,6 +487,8 @@ Expected Result: Create a Money Market and Joint saving with a deposit of 100000
 32)
 Title : Should not create a saving because the deposit is less than 25.
 
+Pre-condition: Exists a user
+
 Description:  We go to the new savings form select the options Standard and Individual, type data in the inputs and submit.
 
 Date: 10/03/2022
@@ -430,6 +501,8 @@ Expected Result: Should keep on the page and dont redirect us to the table with 
 
 33)
 Title : Should not create a saving because the deposit is in negative numbers.
+
+Pre-condition: Exists a user
 
 Description:  We go to the new savings form select the options Standard and Joint, type data in the inputs and submit.
 
@@ -444,6 +517,8 @@ Expected Result: Should keep on the page and dont redirect us to the table with 
 34)
 Title : Should not create a saving because the deposit is letters.
 
+Pre-condition: Exists a user
+
 Description:  We go to the new savings form select the options Interest and Individual, type data in the inputs and submit.
 
 Date: 10/03/2022
@@ -457,6 +532,8 @@ Expected Result: Should keep on the page and dont redirect us to the table with 
 35)
 Title : Should not create a saving because the deposit is blank.
 
+Pre-condition: Exists a user
+
 Description:  We go to the new savings form select the options Interest and Joint, type data in the inputs and submit.
 
 Date: 10/03/2022
@@ -469,6 +546,11 @@ Expected Result: Should keep on the page and dont redirect us to the table with 
 
 36)
 Title : Should switch savings.
+
+Pre-condition: 
+
+1)Exists a user
+2)Exists two or more savings
 
 Description:Go to the view savings page and change the savings we are looking at.
 
@@ -485,6 +567,8 @@ To continue with the automation, now we are going to test the deposit and withdr
 37) 
 Title : Should take you to Deposit form.
 
+Pre-condition:Exists a user
+
 Description: We sign in to the account and then go to the deposit form.
 
 Date: 15/03/2022
@@ -497,6 +581,11 @@ Expected Result: Let us sign in and take us to the Bank's deposit form.
 
 38) 
 Title : Should show a balance when selecting the account Individual Checking
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Checking
 
 Description: We sign in to the account and then go to the deposit form and select the Individual Checking account.
 
@@ -511,6 +600,11 @@ Expected Result: Let us sign in, take us to the Bank's deposit form and after cl
 38) 
 Title : Should show a balance when selecting the account Individual Savings
 
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Savings
+
 Description: We sign in to the account and then go to the deposit form and select the Individual Savings account.
 
 Date: 15/03/2022
@@ -523,6 +617,8 @@ Expected Result: Let us sign in, take us to the Bank's deposit form and after cl
 
 39) 
 Title : Should reset the information of the Deposit Form.
+
+Pre-condition:Exists a user
 
 Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button reset.
 
@@ -537,6 +633,7 @@ Expected Result: Let us sign in and take us to the Bank's deposit form, and rese
 40) 
 Title : Should Create a deposit in the account Individual Checking of 1.57 dollars.
 
+Pre-condition:Exists a user
 
 Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
 
@@ -555,6 +652,8 @@ Expected Result: Let us sign in and take us to the Bank's deposit form, create t
 41) 
 Title : Should Create a deposit in the account Individual Checking of 1,000,000 dollars.
 
+Pre-condition:Exists a user
+
 Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
 
 Date: 15/03/2022
@@ -567,6 +666,8 @@ Expected Result: Let us sign in and take us to the Bank's deposit form, create t
 
 42) 
 Title : Should Create a deposit in the account Individual Savings of 1.57 dollars.
+
+Pre-condition:Exists a user
 
 Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
 
@@ -581,6 +682,8 @@ Expected Result: Let us sign in and take us to the Bank's deposit form, create t
 43) 
 Title : Should Create a deposit in the account Individual Savings of 1,000,000 dollars.
 
+Pre-condition:Exists a user
+
 Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
 
 Date: 15/03/2022
@@ -593,6 +696,8 @@ Expected Result: Let us sign in and take us to the Bank's deposit form, create t
 
 44) 
 Title : Should not create a deposit because the deposit input was in blank.
+
+Pre-condition:Exists a user
 
 Description: We sign in to the account and then go to the deposit form, we select the account Individual Savings and don't type data in the input, afterwards we click the button submit.
 
@@ -607,6 +712,8 @@ Expected Result: Let us sign in and take us to the Bank's deposit form, and don'
 45) 
 Title : Should not create a deposit because the account was not selected.
 
+Pre-condition:Exists a user
+
 Description: We sign in to the account and then go to the deposit form, we don't select the account and type data in the input, afterwards we click the button submit.
 
 Date: 15/03/2022
@@ -620,6 +727,8 @@ Expected Result: Let us sign in and take us to the Bank's deposit form, and don'
 46)  
 Title : Should not create a deposit because the deposit input was in negative numbers.
 
+Pre-condition:Exists a user
+
 Description: We sign in to the account and then go to the deposit form, we select the account Individual Savings and type data in the input, afterwards we click the button submit.
 
 Date: 15/03/2022
@@ -632,6 +741,8 @@ Expected Result: Let us sign in and take us to the Bank's deposit form, and don'
 
 47)  
 Title : Should not create a deposit because the deposit input was in letters.
+
+Pre-condition:Exists a user
 
 Description: We sign in to the account and then go to the deposit form, we select the account Individual Savings and type data in the input, afterwards we click the button submit.
 
