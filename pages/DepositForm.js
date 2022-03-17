@@ -6,10 +6,25 @@ class DepositForm extends BasePage {
 
     get depositAmount () {return $('#amount')}
 
-    get newDepositFormSubmitButton () {return $('#submit')}
+    get accountBalance () {return $('#selectedAccountBalance')}
 
-    get newDepositFormResetButton () {return $('#reset')}
+    get submitButton() {return $("button=Submit");}
 
+    get newDepositFormResetButton () {return $('[type="reset"]')}
 
+    async resetingDepositForm () {
+        await this.newDepositFormResetButton.click()
+    }
+    async selectDepositAccount (accountName){
+        await $('#selectedAccount').selectByVisibleText(accountName)
+    }
+    async clickSubmitButton() {
+        await this.clickElement(this.submitButton);
+      }
+    async createDeposit (accountName, amount){
+        await this.selectDepositAccount(accountName);
+        await super.sendText (this.depositAmount, amount);
+        await this.clickSubmitButton();
+      }
 }
 export default new DepositForm();

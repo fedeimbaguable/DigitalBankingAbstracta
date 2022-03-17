@@ -35,6 +35,9 @@ exports.config = {
         savings: [
             './tests/savings.test.js'
         ],
+        deposit: [
+            './tests/deposit.test.js'
+        ],
     },
     // Patterns to exclude.
     exclude: [
