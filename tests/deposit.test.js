@@ -18,11 +18,6 @@ describe('Deposits', () => {
         await HomePage.accessNewDepositForm()
         await expect(DepositForm.pageTitle).toHaveText('Deposit')
     })
-    it('Should take you to Checkings View', async ()=> {
-        await HomePage.displayCheckingMenu() 
-        await HomePage.accessViewCheckingTable()
-        await expect(CheckingPageTable.checkingTitle).toHaveText('View Checking Accounts')
-    })
     it('Should see the three pages going forwards and backwards', async ()=> {
         await HomePage.displayCheckingMenu() 
         await HomePage.accessViewCheckingTable()
