@@ -6,6 +6,10 @@ class DepositForm extends BasePage {
 
     get depositAmount () {return $('#amount')}
 
+    get newDepositFormSubmitButton () {return $('#submit')}
+
+    get newDepositFormResetButton () {return $('#reset')}
+
 
 }
 export default new DepositForm();

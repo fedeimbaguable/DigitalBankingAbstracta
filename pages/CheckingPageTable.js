@@ -14,6 +14,10 @@ class CheckingPageTable extends BasePage {
 
     get checkingTableTextInfo(){return $('#transactionTable_info')}
 
+    async getDeposit(){
+        return $(`#transactionTable>tbody>tr:nth-child(1)>td:nth-child(4)`)
+    }
+
     async getCellFromRow(row){
         return $(`#transactionTable>tbody>tr:nth-child(${row})>td:nth-child(2)`)
     }
