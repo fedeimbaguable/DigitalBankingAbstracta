@@ -450,11 +450,11 @@ Pre-condition:Exists a user
 Date: 17/03/2022
 
 Steps to reproduce:
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw".
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form.
+Expected Result: Sign in and open the Bank's withdraw form.
 
 49) 
 Title : Balance visualization when selecting the account Individual Checking
@@ -466,15 +466,13 @@ Pre-condition:
 
 Date: 17/03/2022
 
-Functionality: Show us the balance in the withdraw form.
-
 Steps to reproduce:
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)Select the account Individual Checking.
 
-Expected Result: Let us sign in, take us to the Bank's withdraw form and after clicking the account show us the balance.
+Expected Result: Sign in, open the Bank's withdraw form and after clicking the account show the balance.
 
 49)
 Title : Balance visualization when selecting the account Individual Savings
@@ -486,15 +484,13 @@ Pre-condition:
 
 Date: 17/03/2022
 
-Functionality: Show us the balance in the withdraw form.
-
 Steps to reproduce:
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)Select the account Individual Savings.
 
-Expected Result: Let us sign in, take us to the Bank's withdraw form and after clicking the account show us the balance.
+Expected Result: Sign in, open the Bank's withdraw form and after clicking the account show the balance.
 
 50) 
 Title : Reset the information of the withdraw Form.
@@ -504,14 +500,14 @@ Pre-condition:Exists a user
 Date: 17/03/2022
 
 Steps to reproduce:
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)Select the account Individual Savings
 5)Introduce $10 dollars 
 6)Click reset button
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form, and reset the data.
+Expected Result: Sign in, open the Bank's withdraw form, and reset the data.
 
 51) 
 Title : Withdraw creation in the account Individual Checking of 25 dollars more than the balance.
@@ -523,14 +519,14 @@ Pre-condition:
 Date: 17/03/2022
 
 Steps to reproduce:
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)Select the account Individual checking
 5)Introduce $25 dollars more than the balance
 6)Click submit button
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form, create the withdraw and take us to the Checking page and see the withdraw in the table.
+Expected Result: Sign in, open the Bank's withdraw form, create the withdraw and visualize on the Checking page the withdraw in the table.
 
 52) 
 Title : Withdraw creation in the account Individual Savings of 25 dollars more than the balance.
@@ -542,14 +538,14 @@ Pre-condition:
 Date: 17/03/2022
 
 Steps to reproduce:
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)Select the account Individual savings
 5)Introduce $25 dollars more than the balance
 6)Click submit button
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form, create the withdraw and take us to the Savings page and see the withdraw in the table.
+Expected Result: Sign in, open the Bank's withdraw form, create the withdraw and visualize on the Savings page the withdraw in the table.
 
 53) 
 Title : Withdraw creation in the account Individual Savings of 100 dollars.
@@ -561,14 +557,15 @@ Pre-condition:
 Date: 17/03/2022
 
 Steps to reproduce:
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)Select the account Individual savings
 5)Introduce $100 dollars
 6)Click submit button
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form, create the withdraw and take us to the Savings page and see the withdraw in the table.
+Expected Result: Sign in, open the Bank's withdraw form, create the withdraw and visualize on the Savings page the withdraw in the table.
+
 
 54) 
 Title : Withdraw creation in the account Individual Checking of 100 dollars.
@@ -580,14 +577,14 @@ Pre-condition:
 Date: 17/03/2022
 
 Steps to reproduce:
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)Select the account Individual checking
 5)Introduce $100 dollars
 6)Click submit button
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form, create the withdraw and take us to the Checking page and see the withdraw in the table.
+Expected Result: Sign in, open the Bank's withdraw form, create the withdraw and visualize on the Checking page the withdraw in the table.
 
 55) 
 Title : Don't create a withdraw because the withdraw input was in blank.
@@ -596,14 +593,15 @@ Pre-condition:Exists a user
 
 Date: 17/03/2022
 
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)We select the account Individual Savings
 5)Leave in blank the input 
 6)Click submit button
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form, and don't create a withdraw.
+Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
 
 56) 
 Title : Don't create a withdraw because the account was not selected.
@@ -612,14 +610,15 @@ Pre-condition:Exists a user
 
 Date: 17/03/2022
 
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)We don't select the account Individual Savings
 5)Introduce $10 dollars
 6)Click submit button
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form, and don't create a withdraw.
+Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
 
 57)  
 Title : Don't create a withdraw because the withdraw input was in negative numbers.
@@ -628,14 +627,15 @@ Pre-condition:Exists a user
 
 Date: 17/03/2022
 
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)We select the account Individual Savings
 5)Introduce $-10 dollars 
 6)Click submit button
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form, and don't create a withdraw.
+Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
 
 58)  
 Title : Don't create a withdraw because the deposit input was in letters.
@@ -644,11 +644,31 @@ Pre-condition:Exists a user
 
 Date: 17/03/2022
 
-1)We introduce a correct username and password : jsmith@demo.io-Demo123!. 
-2)We click submit the form
-3)We click on "withdraw"
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
 4)We select the account Individual Savings
 5)Introduce "aa" dollars  
 6)Click submit button
 
-Expected Result: Let us sign in and take us to the Bank's withdraw form, and don't create a withdraw.
+Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
+
+59) 
+Title : Don't create a withdraw because the withdraw input was of 26 dollars.
+
+Pre-condition:
+1)Exists a user
+2)Exists an Individual Checking
+
+Date: 17/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "withdraw".
+4)We select the account Individual Savings
+5)Introduce $26 dollars more than the balance 
+6)Click submit button
+
+Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
