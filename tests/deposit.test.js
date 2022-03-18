@@ -57,7 +57,7 @@ describe('Deposits', () => {
     }) 
 
     accountsIncorrectDeposit.forEach((account) => {
-        it(`Should create a deposit in the ${account.reason}`, async () => {
+        it(`Should not create a deposit in the ${account.reason}`, async () => {
             await HomePage.accessNewDepositForm()
             await DepositForm.createDeposit(account.name, account.amount)
             await expect(DepositForm.depositAmount).toBePresent()

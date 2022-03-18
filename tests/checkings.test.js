@@ -4,7 +4,6 @@ import CheckingPageForm from "../pages/CheckinPageForm"
 import CheckingPageTable from "../pages/CheckingPageTable";
 import CorrectCheckings from "../datos/CorrectCheckings";
 import IncorrectCheckings from "../datos/IncorrectCheckings"
-import AccountForm from "../pages/AccountForm"
 
 
 describe('Checkings', () => {
