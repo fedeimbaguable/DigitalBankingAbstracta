@@ -514,7 +514,7 @@ Steps to reproduce:
 Expected Result: Let us sign in and take us to the Bank's withdraw form, and reset the data.
 
 51) 
-Title : Create a withdraw in the account Individual Checking of 25 dollars more than the balance.
+Title : Withdraw creation in the account Individual Checking of 25 dollars more than the balance.
 
 Pre-condition:
 1)Exists a user
@@ -533,7 +533,7 @@ Steps to reproduce:
 Expected Result: Let us sign in and take us to the Bank's withdraw form, create the withdraw and take us to the Checking page and see the withdraw in the table.
 
 52) 
-Title : Create a withdraw in the account Individual Savings of 25 dollars more than the balance.
+Title : Withdraw creation in the account Individual Savings of 25 dollars more than the balance.
 
 Pre-condition:
 1)Exists a user
@@ -552,7 +552,7 @@ Steps to reproduce:
 Expected Result: Let us sign in and take us to the Bank's withdraw form, create the withdraw and take us to the Savings page and see the withdraw in the table.
 
 53) 
-Title : Create a withdraw in the account Individual Savings of 100 dollars.
+Title : Withdraw creation in the account Individual Savings of 100 dollars.
 
 Pre-condition:
 1)Exists a user
@@ -571,7 +571,7 @@ Steps to reproduce:
 Expected Result: Let us sign in and take us to the Bank's withdraw form, create the withdraw and take us to the Savings page and see the withdraw in the table.
 
 54) 
-Title : Create a withdraw in the account Individual Checking of 100 dollars.
+Title : Withdraw creation in the account Individual Checking of 100 dollars.
 
 Pre-condition:
 1)Exists a user
@@ -622,7 +622,7 @@ Date: 17/03/2022
 Expected Result: Let us sign in and take us to the Bank's withdraw form, and don't create a withdraw.
 
 57)  
-Title : Should not create a withdraw because the withdraw input was in negative numbers.
+Title : Don't create a withdraw because the withdraw input was in negative numbers.
 
 Pre-condition:Exists a user
 
@@ -638,7 +638,7 @@ Date: 17/03/2022
 Expected Result: Let us sign in and take us to the Bank's withdraw form, and don't create a withdraw.
 
 58)  
-Title : Should not create a deposit because the deposit input was in letters.
+Title : Don't create a withdraw because the deposit input was in letters.
 
 Pre-condition:Exists a user
 
