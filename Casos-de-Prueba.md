@@ -1186,3 +1186,25 @@ Steps to reproduce:
 7)Click submit button
 
 Expected Result: Expected Result: Sign in, open the Bank's internal transfers form and don't create the transfer.
+
+71)  
+Title : Invalid internal transfer because transfer accounts are the same.
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Savings
+3)Exists an Individual Checking
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Select the account Individual Checkings.
+5)Select the account Individual Checkings.
+6)Introduce 10 dollars
+7)Click submit button
+
+Expected Result: Expected Result: Sign in, open the Bank's internal transfers form and don't create the transfer.
