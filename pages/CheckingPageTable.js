@@ -1,6 +1,6 @@
-import AccountTable from './AccountTable';
+import TransactionsTable from './TransactionsTable';
 
-class CheckingPageTable extends AccountTable {
+class CheckingPageTable extends TransactionsTable {
 
     get switchChecking () { return $('//*[contains(text(),"Individual Checking")]//ancestor::div[@class="card-body"]//span[@class="switch-handle"]')}
 

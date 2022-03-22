@@ -1,11 +1,9 @@
 import HomePage from "../pages/HomePage";
 import SignIn from "../pages/SignIn";
 import CheckingPageTable from "../pages/CheckingPageTable";
-import DepositForm from "../pages/DepositForm";
-import {accountsSavingsDeposit} from "../datos/CorrectSavingsDeposit";
-import {accountsCheckingsDeposit} from "../datos/CorrectCheckingsDeposits";
-import {accountsIncorrectDeposit} from "../datos/IncorrectDeposits";
+import DepositPage from "../pages/DepositPage";
 import SavingsTable from "../pages/SavingsTable";
+import {validSavingsDeposit, validCheckingsDeposit, invalidDeposits} from "../datos/Deposits"
 
 
 describe('Deposits', () => {
@@ -15,52 +13,52 @@ describe('Deposits', () => {
             let password = 'Demo123!';
             await SignIn.logIn(username, password);
     });
-    it('Should take you to Deposit form', async ()=> {
+    it('Should take you to the Deposit form', async ()=> {
         await HomePage.accessNewDepositForm()
-        await expect(DepositForm.pageTitle).toHaveText('Deposit')
+        await expect(DepositPage.pageTitle).toHaveText('Deposit')
     })
     it('Should show the balance when selecting Individual Checking', async ()=> {
         await HomePage.accessNewDepositForm()
-        await DepositForm.selectDepositAccount('Individual Checking (Standard Checking)')
-        await expect(DepositForm.accountBalance).toBeDisplayed();
+        await DepositPage.selectDepositAccount('Individual Checking (Standard Checking)')
+        await expect(DepositPage.accountBalance).toBeDisplayed();
     })
     it('Should show the balance when selecting Individual Savings', async ()=> {
         await HomePage.accessNewDepositForm()
-        await DepositForm.selectDepositAccount('Indiviudal Savings (Money Market)')
-        await expect(DepositForm.accountBalance).toBeDisplayed();
+        await DepositPage.selectDepositAccount('Indiviudal Savings (Money Market)')
+        await expect(DepositPage.accountBalance).toBeDisplayed();
     })
-    it('Should reset the deposit creation form when clicking reset', async ()=> {
+    it('Should reset the deposit creation form when clicking the reset button', async ()=> {
         await HomePage.accessNewDepositForm()
-        await DepositForm.sendText(DepositForm.depositAmount, '10')
-        await DepositForm.resetingDepositForm()
-        await expect(DepositForm.depositAmount).toHaveText('')
+        await DepositPage.sendText(DepositPage.depositAmount, '10')
+        await DepositPage.resetDepositForm()
+        await expect(DepositPage.depositAmount).toHaveText('')
     }) 
-        accountsCheckingsDeposit.forEach((account) => {
-            it(`Should create a deposit in the ${account.reason}`, async () => {
+    validCheckingsDeposit.forEach((account) => {
+            it(`Should create a deposit of ${deposit.amount} in the ${deposit.accountName} account`, async () => {
                 await HomePage.accessNewDepositForm()
-                await DepositForm.createDeposit(account.name, account.amount)
-                await expect(CheckingPageTable.depositCell).toHaveTextContaining(`${account.amount}`)
+                await DepositPage.createDeposit(account.name, account.amount)
+                await expect(CheckingPageTable.amountCell).toHaveTextContaining(`${account.amount}`)
             })
             });
-        accountsSavingsDeposit.forEach((account) => {
-        it(`Should create a deposit in the ${account.reason}`, async () => {
+    validSavingsDeposit.forEach((account) => {
+        it(`Should create a deposit of ${deposit.amount} in the ${deposit.accountName} account`, async () => {
             await HomePage.accessNewDepositForm()
-            await DepositForm.createDeposit(account.name, account.amount)
-            await expect(SavingsTable.depositCell).toHaveTextContaining(`${account.amount}`)
+            await DepositPage.createDeposit(account.name, account.amount)
+            await expect(SavingsTable.amountCell).toHaveTextContaining(`${account.amount}`)
         })
         });
-    it('Should not create a deposit because the account was not selected', async ()=> {
+    it('Should not create a deposit when an account is not selected', async ()=> {
         await HomePage.accessNewDepositForm()
-        await DepositForm.sendText(DepositForm.depositAmount, '10')
-        await DepositForm.clickSubmitButton()
-        await expect(DepositForm.depositAmount).toBePresent()
+        await DepositPage.sendText(DepositPage.depositAmount, '10')
+        await DepositPage.clickSubmitButton()
+        await expect(DepositPage.depositAmount).toBePresent()
     }) 
 
-    accountsIncorrectDeposit.forEach((account) => {
-        it(`Should not create a deposit in the ${account.reason}`, async () => {
+    invalidDeposits.forEach((account) => {
+        it(`Should not create a deposit of ${deposit.amount} in the ${deposit.accountName} account`, async () => {
             await HomePage.accessNewDepositForm()
-            await DepositForm.createDeposit(account.name, account.amount)
-            await expect(DepositForm.depositAmount).toBePresent()
+            await DepositPage.createDeposit(account.name, account.amount)
+            await expect(DepositPage.depositAmount).toBePresent()
         })
         });
     });

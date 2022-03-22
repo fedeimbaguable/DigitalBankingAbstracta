@@ -1,8 +1,8 @@
 import BasePage from './BasePage';
 
-class DepositForm extends BasePage {
+class DepositPage extends BasePage {
     
-    get selectDepositAccount(){return $('#selectedAccount')}
+    get depositAccountSelector(){return $('#selectedAccount')}
 
     get depositAmount () {return $('#amount')}
 
@@ -10,10 +10,10 @@ class DepositForm extends BasePage {
 
     get submitButton() {return $("button=Submit");}
 
-    get newDepositFormResetButton () {return $('[type="reset"]')}
+    get resetButton () {return $('[type="reset"]')}
 
-    async resetingDepositForm () {
-        await this.newDepositFormResetButton.click()
+    async resetDepositForm () {
+        await this.resetButton.click()
     }
     async selectDepositAccount (accountName){
         await $('#selectedAccount').selectByVisibleText(accountName)
@@ -23,8 +23,8 @@ class DepositForm extends BasePage {
       }
     async createDeposit (accountName, amount){
         await this.selectDepositAccount(accountName);
-        await super.sendText (this.depositAmount, amount);
+        await super.sendText(this.depositAmount, amount);
         await this.clickSubmitButton();
       }
 }
-export default new DepositForm();
+export default new DepositPage();

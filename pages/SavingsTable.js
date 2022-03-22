@@ -1,6 +1,6 @@
-import AccountTable from './AccountTable';
+import TransactionsTable from './TransactionsTable';
 
-class SavingsTable extends AccountTable {
+class SavingsTable extends TransactionsTable {
 
     get switchSaving () { return $('//*[contains(text(),"Indiviudal Savings")]//ancestor::div[@class="card-body"]//span[@class="switch-handle"]')}
 

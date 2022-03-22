@@ -27,8 +27,8 @@ it('Should take you to Savings View', async ()=> {
 it('Should filter the table with the word "Interest"', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessViewSavingsTable()
-    await SavingsTable.sendText(SavingsTable.searchTableInput, 'Interest')
-    let tableLength = await SavingsTable.getTableNumberOfRows();
+    await SavingsTable.sendText(SavingsTable.searchInput, 'Interest')
+    let tableLength = await SavingsTable.getNumberOfRows();
     let cell;
     for(let i=1; i<= tableLength; i++){
     cell = await SavingsTable.getCellFromRow(i);

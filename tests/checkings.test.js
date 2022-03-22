@@ -38,8 +38,8 @@ it('Should see the three pages going forwards and backwards', async ()=> {
 it('Should filter the table with the word "Income"', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessViewCheckingTable()
-    await CheckingPageTable.sendText(CheckingPageTable.searchTableInput, 'Income')
-    let tableLength = await CheckingPageTable.getTableNumberOfRows();
+    await CheckingPageTable.sendText(CheckingPageTable.searchInput, 'Income')
+    let tableLength = await CheckingPageTable.getNumberOfRows();
     let cell;
     for(let i=1; i<= tableLength; i++){
     cell = await CheckingPageTable.getCellFromRow(i);

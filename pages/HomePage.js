@@ -9,11 +9,11 @@ class HomePage extends BasePage {
 
   get logOutButton() {return $('a[href="/bank/logout"]')};
 
-  get newCheckingForm () {return $('#new-checking-menu-item')};
+  get newCheckingMenuItem () {return $('#new-checking-menu-item')};
 
-  get newDepositForm () {return $('#deposit-menu-item')};
+  get newDepositMenuItem () {return $('#deposit-menu-item')};
 
-  get checkingMenu () {return $('#checking-menu')};
+  get viewCheckingMenuItem () {return $('#checking-menu')};
 
   get viewCheckingTable () {return $('#view-checking-menu-item')};
 
@@ -30,7 +30,7 @@ class HomePage extends BasePage {
     await this.savingsMenu.click()
   }
   async accessNewDepositForm () {
-    await this.newDepositForm.click()
+    await this.newDepositMenuItem.click()
   }
   async accessNewSavingsForm () {
     await this.newSavingsForm.click()
@@ -39,10 +39,10 @@ class HomePage extends BasePage {
     await this.viewCheckingTable.click()
   }
   async displayCheckingMenu () {
-    await this.checkingMenu.click()
+    await this.viewCheckingMenuItem.click()
   }
   async accessNewCheckingForm () {
-    await this.newCheckingForm.click()
+    await this.newCheckingMenuItem.click()
   }
   async accessUserSettings() {
     await this.userAvatar.click()
