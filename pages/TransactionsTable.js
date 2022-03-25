@@ -8,6 +8,8 @@ class TransactionsTable extends BasePage {
 
     get amountCell(){return $('#transactionTable>tbody>tr:nth-child(1)>td:nth-child(4)')}
 
+    switch (accountName) { return $(`//*[contains(text(),"${accountName}")]//ancestor::div[@class="card-body"]//span[@class="switch-handle"]`)}
+
     async getNumberOfRows(){
         let rows = await $$("tbody > tr");
         return rows.length

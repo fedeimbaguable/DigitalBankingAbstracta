@@ -4,6 +4,7 @@ import CheckingPageForm from "../pages/CheckinPageForm"
 import CheckingPageTable from "../pages/CheckingPageTable";
 import CorrectCheckings from "../datos/CorrectCheckings";
 import IncorrectCheckings from "../datos/IncorrectCheckings"
+import CheckingTable from "../pages/CheckingTable";
 
 
 describe('Checkings', () => {
@@ -62,10 +63,11 @@ CorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
     })
     });
 it('Should switch checking', async ()=> {
+    const accountName = "Individual Checking"
     await HomePage.displayCheckingMenu() 
     await HomePage.accessViewCheckingTable()
-    await CheckingPageTable.activateSwitchChecking()
-    await expect(CheckingPageTable.switchChecked).toHaveAttribute('checked', 'true')
+    await CheckingTable.activateSwitchSaving(accountName)
+    await expect(CheckingTable.switch(accountName)).toHaveAttribute('checked', 'true')
 })
 IncorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
 it(`Should not create a checking ${reason}`, async ()=> {

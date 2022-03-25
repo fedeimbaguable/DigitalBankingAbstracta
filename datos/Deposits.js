@@ -4,12 +4,9 @@ export const invalidDeposits = [
         { name: "Indiviudal Savings (Money Market)", amount: 'aa' }
 ];
 
-export const validCheckingsDeposit = [
-        { name: "Individual Checking (Standard Checking)", amount: 1.57},
-        { name: "Individual Checking (Standard Checking)", amount: 1000000}
-      ];
-
-      export const validSavingsDeposit = [
-        { name: "Indiviudal Savings (Money Market)", amount: 1.57},
-        { name: "Indiviudal Savings (Money Market)", amount: 1000000}
+      export const validDeposits = [
+        { name: "Indiviudal Savings (Money Market)", amount: 1.57, type: "Savings"},
+        { name: "Indiviudal Savings (Money Market)", amount: 1000000, type: "Savings"},
+        { name: "Individual Checking (Standard Checking)", amount: 1.57, type: "Checkings"},
+        { name: "Individual Checking (Standard Checking)", amount: 1000000, type: "Checkings"}
       ];

@@ -9,12 +9,12 @@ import IncorrectCheckings from "../datos/IncorrectSavings"
 
 describe('Savings', () => {
 beforeEach(async () => {
-    await SignIn.open('bank/login');
+    await SignIn.open('login');
     let username = 'jsmith@demo.io';
     let password = 'Demo123!';
     await SignIn.logIn(username, password);
 });
-it('Should take you to Savings form', async ()=> {
+it.only('Should take you to Savings form', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessNewSavingsForm()
     await expect(SavingsForm.pageTitle).toHaveText('Create Savings')
@@ -51,10 +51,11 @@ CorrectSavings.forEach(({type, ownership, name, amount, reason}) => {
     })
     });
 it('Should switch checking', async ()=> {
+    const accountName = "Indiviudal Savings"
     await HomePage.displaySavingsMenu() 
     await HomePage.accessViewSavingsTable()
-    await SavingsTable.activateSwitchSaving()
-    await expect(SavingsTable.switchChecked).toHaveAttribute('checked', 'true')
+    await SavingsTable.activateSwitchSaving(accountName)
+    await expect(SavingsTable.switch(accountName)).toHaveAttribute('checked', 'true')
 })
 IncorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
     it(`Should not create a saving ${reason}`, async ()=> {

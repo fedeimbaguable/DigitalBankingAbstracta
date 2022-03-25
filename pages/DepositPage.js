@@ -2,7 +2,7 @@ import BasePage from './BasePage';
 
 class DepositPage extends BasePage {
     
-    get depositAccountSelector(){return $('#selectedAccount')}
+    get depositAccountSelect(){return $('#selectedAccount')}
 
     get depositAmount () {return $('#amount')}
 
@@ -23,7 +23,7 @@ class DepositPage extends BasePage {
       }
     async createDeposit (accountName, amount){
         await this.selectDepositAccount(accountName);
-        await super.sendText(this.depositAmount, amount);
+        await this.sendText(this.depositAmount, amount);
         await this.clickSubmitButton();
       }
 }

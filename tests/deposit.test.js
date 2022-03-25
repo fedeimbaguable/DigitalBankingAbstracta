@@ -1,14 +1,14 @@
 import HomePage from "../pages/HomePage";
 import SignIn from "../pages/SignIn";
-import CheckingPageTable from "../pages/CheckingPageTable";
+import CheckingTable from "../pages/CheckingTable";
 import DepositPage from "../pages/DepositPage";
 import SavingsTable from "../pages/SavingsTable";
-import {validSavingsDeposit, validCheckingsDeposit, invalidDeposits} from "../datos/Deposits"
+import { invalidDeposits, validDeposits} from "../datos/Deposits"
 
 
 describe('Deposits', () => {
     beforeEach(async () => {
-            await SignIn.open('bank/login');
+            await SignIn.open('/login');
             let username = 'jsmith@demo.io';
             let password = 'Demo123!';
             await SignIn.logIn(username, password);
@@ -33,20 +33,18 @@ describe('Deposits', () => {
         await DepositPage.resetDepositForm()
         await expect(DepositPage.depositAmount).toHaveText('')
     }) 
-    validCheckingsDeposit.forEach((account) => {
+    validDeposits.forEach((deposit) => {
             it(`Should create a deposit of ${deposit.amount} in the ${deposit.accountName} account`, async () => {
                 await HomePage.accessNewDepositForm()
-                await DepositPage.createDeposit(account.name, account.amount)
-                await expect(CheckingPageTable.amountCell).toHaveTextContaining(`${account.amount}`)
+                await DepositPage.createDeposit(deposit.name, deposit.amount)
+                if (deposit.type == "Checkings"){
+                    await expect(CheckingTable.amountCell).toHaveTextContaining(`${deposit.amount}`)
+                } else {
+                    await expect(SavingsTable.amountCell).toHaveTextContaining(`${deposit.amount}`)
+                }
+                
             })
             });
-    validSavingsDeposit.forEach((account) => {
-        it(`Should create a deposit of ${deposit.amount} in the ${deposit.accountName} account`, async () => {
-            await HomePage.accessNewDepositForm()
-            await DepositPage.createDeposit(account.name, account.amount)
-            await expect(SavingsTable.amountCell).toHaveTextContaining(`${account.amount}`)
-        })
-        });
     it('Should not create a deposit when an account is not selected', async ()=> {
         await HomePage.accessNewDepositForm()
         await DepositPage.sendText(DepositPage.depositAmount, '10')
