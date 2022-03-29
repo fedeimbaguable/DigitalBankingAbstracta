@@ -17,8 +17,9 @@ class CheckingPageTable extends TransactionsTable {
     async changeCheckingTransactionsTablePrevious(){
         await this.checkingTransactionsTablePreviousButton.click()
     }
-    async activateSwitchSaving (accountName){
+    async activateSwitchChecking (accountName){
         await this.clickElement(await this.switch(accountName))
     }
 }
+
 export default new CheckingPageTable();

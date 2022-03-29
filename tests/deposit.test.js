@@ -37,7 +37,7 @@ describe('Deposits', () => {
             it(`Should create a deposit of ${deposit.amount} in the ${deposit.accountName} account`, async () => {
                 await HomePage.accessNewDepositForm()
                 await DepositPage.createDeposit(deposit.name, deposit.amount)
-                if (deposit.type == "Checkings"){
+                if (deposit.type == "Checking"){
                     await expect(CheckingTable.amountCell).toHaveTextContaining(`${deposit.amount}`)
                 } else {
                     await expect(SavingsTable.amountCell).toHaveTextContaining(`${deposit.amount}`)
@@ -56,7 +56,7 @@ describe('Deposits', () => {
         it(`Should not create a deposit of ${deposit.amount} in the ${deposit.accountName} account`, async () => {
             await HomePage.accessNewDepositForm()
             await DepositPage.createDeposit(account.name, account.amount)
-            await expect(DepositPage.depositAmount).toBePresent()
+            await expect(DepositPage.$('#selectedAccount')).toHaveText('---------- Select Account -----------')
         })
         });
     });

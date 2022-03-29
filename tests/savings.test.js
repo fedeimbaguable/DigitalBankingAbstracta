@@ -14,7 +14,7 @@ beforeEach(async () => {
     let password = 'Demo123!';
     await SignIn.logIn(username, password);
 });
-it.only('Should take you to Savings form', async ()=> {
+it('Should take you to Savings form', async ()=> {
     await HomePage.displaySavingsMenu() 
     await HomePage.accessNewSavingsForm()
     await expect(SavingsForm.pageTitle).toHaveText('Create Savings')
