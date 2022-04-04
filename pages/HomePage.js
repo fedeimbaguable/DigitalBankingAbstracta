@@ -9,6 +9,8 @@ class HomePage extends BasePage {
 
   get logOutButton() {return $('a[href="/bank/logout"]')};
 
+  get newWithdrawMenuItem () {return $('#withdraw-menu-item')};
+
   get newCheckingMenuItem () {return $('#new-checking-menu-item')};
 
   get newDepositMenuItem () {return $('#deposit-menu-item')};
@@ -28,6 +30,9 @@ class HomePage extends BasePage {
   }
   async displaySavingsMenu () {
     await this.savingsMenu.click()
+  }
+  async accessNewWithdrawForm () {
+    await this.newWithdrawMenuItem.click()
   }
   async accessNewDepositForm () {
     await this.newDepositMenuItem.click()
