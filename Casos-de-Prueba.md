@@ -327,7 +327,6 @@ Input data and actions: We click on checking and aftwerwards on view checking, o
 
 Expected Result: Take us to the Bank's view checking page and change the checking view.
 
-
 22)
 Title : Should change the page.
 
@@ -363,7 +362,6 @@ Functionality: Filter the checking we are viewing.
 Input data and actions: Once we are in the view checking page we type the word "income" in the search input to filter this word.
 
 Expected Result: Filter the table with the word income.
-<<<<<<< HEAD
 
 24)
 Title : Should take you to Savings form.
@@ -568,9 +566,10 @@ Expected Result: Take us to the Bank's view savings page and change the saving v
 
 To continue with the automation, now we are going to test the deposit and withdraw sections. They are also very similar.
 
+To continue with the automation, now we are going to test the deposit and withdraw sections. They are also very similar.
+
 37) 
 Title : Should take you to Deposit form.
-<<<<<<< HEAD
 
 Pre-condition:Exists a user
 
@@ -754,115 +753,6 @@ Functionality: Should not create a new deposit.
 Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the account Individual Savings,introduce "aa" in the deposit input and submit.
 
 Expected Result: Let us sign in and take us to the Bank's deposit form, and don't create a deposit.
-=======
-Description: We sign in to the account and then go to the deposit form.
-Date: 15/03/2022
-Functionality: Take us to the deposit form.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit".
-Expected Result: Let us sign in and take us to the Bank's deposit form.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form.
-
-38) 
-Title : Should show a balance when selecting the account Individual Checking
-Description: We sign in to the account and then go to the deposit form and select the Individual Checking account.
-Date: 15/03/2022
-Functionality: Show us the balance in the deposit form.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", and select the account Individual Checking.
-Expected Result: Let us sign in, take us to the Bank's deposit form and after clicking the account show us the balance.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, after clicking the account it displayed the balance correctly.
-
-38) 
-Title : Should show a balance when selecting the account Individual Savings
-Description: We sign in to the account and then go to the deposit form and select the Individual Savings account.
-Date: 15/03/2022
-Functionality: Show us the balance in the deposit form.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", and select the account Individual Savings.
-Expected Result: Let us sign in, take us to the Bank's deposit form and after clicking the account show us the balance.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, after clicking the account it displayed the balance correctly.
-
-39) 
-Title : Should reset the information of the Deposit Form.
-Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button reset.
-Date: 15/03/2022
-Functionality: Reset the data of a new deposit.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Checking,introduce $10 dollars and reset.
-Expected Result: Let us sign in and take us to the Bank's deposit form, and reset the data.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and reset the data correctly.
-
-40) 
-Title : Should Create a deposit in the account Individual Checking of 1.57 dollars.
-Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
-Date: 15/03/2022
-Functionality: Create a new deposit.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Checking,introduce $1.57 dollars and submit.
-Expected Result: Let us sign in and take us to the Bank's deposit form, create the deposit and take us to the Checking page and see the deposit in the table.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, created the deposit and took us to the checking page table where we could see the deposit.
-
-41) 
-Title : Should Create a deposit in the account Individual Checking of 1,000,000 dollars.
-Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
-Date: 15/03/2022
-Functionality: Create a new deposit.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Checking,introduce $1,000,000 dollars and submit.
-Expected Result: Let us sign in and take us to the Bank's deposit form, create the deposit and take us to the Checking page and see the deposit in the table.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, created the deposit and took us to the checking page table where we could see the deposit.
-
-42) 
-Title : Should Create a deposit in the account Individual Savings of 1.57 dollars.
-Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
-Date: 15/03/2022
-Functionality: Create a new deposit.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Savings,introduce $1.57 dollars and submit.
-Expected Result: Let us sign in and take us to the Bank's deposit form, create the deposit and take us to the savings page and see the deposit in the table.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, created the deposit and took us to the savings page table where we could see the deposit.
-
-43) 
-Title : Should Create a deposit in the account Individual Savings of 1,000,000 dollars.
-Description: We sign in to the account and then go to the deposit form, we select the account and type data in the input, afterwards we click the button submit.
-Date: 15/03/2022
-Functionality: Create a new deposit.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the Individual Savings,introduce $1,000,000 dollars and submit.
-Expected Result: Let us sign in and take us to the Bank's deposit form, create the deposit and take us to the savings page and see the deposit in the table.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, created the deposit and took us to the savings page table where we could see the deposit.
-
-44) 
-Title : Should not create a deposit because the deposit input was in blank.
-Description: We sign in to the account and then go to the deposit form, we select the account Individual Savings and don't type data in the input, afterwards we click the button submit.
-Date: 15/03/2022
-Functionality: Should not create a new deposit.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the account Individual Savings,leave in blank the input and submit.
-Expected Result: Let us sign in and take us to the Bank's deposit form, and don't create a deposit.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and did'nt create a deposit.
-
-45) 
-Title : Should not create a deposit because the account was not selected.
-Description: We sign in to the account and then go to the deposit form, we don't select the account and type data in the input, afterwards we click the button submit.
-Date: 15/03/2022
-Functionality: Should not create a new deposit.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we don't select the account,introduce $10 dollars and submit.
-Expected Result: Let us sign in and take us to the Bank's deposit form, and don't create a deposit.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and did'nt create a deposit.
-
-46)  
-Title : Should not create a deposit because the deposit input was in negative numbers.
-Description: We sign in to the account and then go to the deposit form, we select the account Individual Savings and type data in the input, afterwards we click the button submit.
-Date: 15/03/2022
-Functionality: Should not create a new deposit.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the account Individual Savings,introduce "-10" in the deposit input and submit.
-Expected Result: Let us sign in and take us to the Bank's deposit form, and don't create a deposit.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and did'nt create a deposit.
-
-47)  
-Title : Should not create a deposit because the deposit input was in letters.
-Description: We sign in to the account and then go to the deposit form, we select the account Individual Savings and type data in the input, afterwards we click the button submit.
-Date: 15/03/2022
-Functionality: Should not create a new deposit.
-Input data and actions: We introduce a correct username and password : jsmith@demo.io-Demo123!. We click submit the form and after sign in we click on "deposit", once in the deposit we select the account Individual Savings,introduce "aa" in the deposit input and submit.
-Expected Result: Let us sign in and take us to the Bank's deposit form, and don't create a deposit.
-Obtained Result: The webapp took us to the dashboard allowing us the access and then took us to the new deposit form, and did'nt create a deposit.
-<<<<<<< HEAD
-
-To continue with the automation, now we are going to test the deposit and withdraw sections. They are also very similar.
 
 48) 
 Title : Withdraw form visualization.
@@ -896,7 +786,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form and after clicking the account show the balance.
 
-49)
+50)
 Title : Balance visualization when selecting the account Individual Savings
 
 Pre-condition:
@@ -914,7 +804,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form and after clicking the account show the balance.
 
-50) 
+51) 
 Title : Reset the information of the withdraw Form.
 
 Pre-condition:Exists a user
@@ -931,7 +821,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form, and reset the data.
 
-51) 
+52) 
 Title : Withdraw creation in the account Individual Checking of 25 dollars more than the balance.
 
 Pre-condition:
@@ -950,7 +840,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form, create the withdraw and visualize on the Checking page the withdraw in the table.
 
-52) 
+53) 
 Title : Withdraw creation in the account Individual Savings of 25 dollars more than the balance.
 
 Pre-condition:
@@ -969,7 +859,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form, create the withdraw and visualize on the Savings page the withdraw in the table.
 
-53) 
+54) 
 Title : Withdraw creation in the account Individual Savings of 100 dollars.
 
 Pre-condition:
@@ -989,7 +879,7 @@ Steps to reproduce:
 Expected Result: Sign in, open the Bank's withdraw form, create the withdraw and visualize on the Savings page the withdraw in the table.
 
 
-54) 
+55) 
 Title : Withdraw creation in the account Individual Checking of 100 dollars.
 
 Pre-condition:
@@ -1008,7 +898,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form, create the withdraw and visualize on the Checking page the withdraw in the table.
 
-55) 
+56) 
 Title : Don't create a withdraw because the withdraw input was in blank.
 
 Pre-condition:Exists a user
@@ -1025,7 +915,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
 
-56) 
+57) 
 Title : Don't create a withdraw because the account was not selected.
 
 Pre-condition:Exists a user
@@ -1042,7 +932,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
 
-57)  
+58)  
 Title : Don't create a withdraw because the withdraw input was in negative numbers.
 
 Pre-condition:Exists a user
@@ -1059,7 +949,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
 
-58)  
+59)  
 Title : Don't create a withdraw because the deposit input was in letters.
 
 Pre-condition:Exists a user
@@ -1076,7 +966,7 @@ Steps to reproduce:
 
 Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
 
-59) 
+60) 
 Title : Don't create a withdraw because the withdraw input was of 26 dollars.
 
 Pre-condition:
@@ -1094,6 +984,205 @@ Steps to reproduce:
 6)Click submit button
 
 Expected Result: Sign in, open the Bank's withdraw form, and don't create a withdraw.
-=======
->>>>>>> ab248a9b9decb2d66f65c0d55b59c5213dd8c35b
->>>>>>> 55487c75394554da12dd2a2bc977249a104094f1
+
+Futhermore, we are going to automate the transfer between account section:
+
+61) 
+Title : Internal transfers form visualization.
+
+Pre-condition:Exists a user
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+
+Expected Result: Sign in and open the Bank's internal transfers form.
+
+62) 
+Title : Balance visualization when selecting the account Individual Checking
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Checking
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Select the account Individual Checking.
+
+Expected Result: Sign in, open the Bank's internal transfers form and after clicking the account show the balance.
+
+63)
+Title : Balance visualization when selecting the account Individual Savings
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Savings
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Select the account Individual Savings.
+
+Expected Result: Sign in, open the Bank's internal transfers form and after clicking the account show the balance.
+
+64)
+Title : Internal transfer from Individual Savings to Individual Checkings of 100 dollars
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Savings
+3)Exists an Individual Checking
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Select the account Individual Savings.
+5)Select the account Individual Checkings.
+6)Introduce $100 dollars
+7)Click submit button
+
+Expected Result: Sign in, open the Bank's internal transfers form, create the transfer and visualize on the Checking page the transfer in the table.
+
+65)
+Title : Internal transfer from Individual Checkings to Individual Savings of 100 dollars
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Savings
+3)Exists an Individual Checking
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Select the account Individual Checkings.
+5)Select the account Individual Savings.
+6)Introduce $100 dollars
+7)Click submit button
+
+Expected Result: Sign in, open the Bank's internal transfers form, create the transfer and visualize on the Savings page the transfer in the table.
+
+66)
+Title : Invalid internal transfer because the amount is greater than the balance
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Savings
+3)Exists an Individual Checking
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Select the account Individual Checkings.
+5)Select the account Individual Savings.
+6)Introduce 1 dollar more than the balance
+7)Click submit button
+
+Expected Result: Sign in, open the Bank's internal transfers form and don't create the transfer.
+
+67) 
+Title : Invalid internal transfer because transfer input was in blank.
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Savings
+3)Exists an Individual Checking
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Select the account Individual Checkings.
+5)Select the account Individual Savings.
+6)Leave the input blank
+7)Click submit button
+
+Expected Result: Expected Result: Sign in, open the Bank's internal transfers form and don't create the transfer.
+
+68) 
+Title : Invalid internal transfer because the accounts are not selected.
+
+Pre-condition:Exists a user
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Don't select the account Individual Checkings.
+5)Don't select the account Individual Savings.
+6)Introduce 10 dollars
+7)Click submit button
+
+Expected Result: Expected Result: Sign in, open the Bank's internal transfers form and don't create the transfer.
+
+69)  
+Title : Invalid internal transfer because transfer input was in negative numbers.
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Savings
+3)Exists an Individual Checking
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Select the account Individual Checkings.
+5)Select the account Individual Savings.
+6)Introduce -10 dollars
+7)Click submit button
+
+Expected Result: Expected Result: Sign in, open the Bank's internal transfers form and don't create the transfer.
+
+70)  
+Title : Invalid internal transfer because transfer input was in letters.
+
+Pre-condition:
+
+1)Exists a user
+2)Exists an Individual Savings
+3)Exists an Individual Checking
+
+Date: 21/03/2022
+
+Steps to reproduce:
+1)Introduce a correct username and password : jsmith@demo.io-Demo123!. 
+2)Click submit the form
+3)Click on "transfer between accounts".
+4)Select the account Individual Checkings.
+5)Select the account Individual Savings.
+6)Introduce "aa" in the transfer input.
+7)Click submit button
+
+Expected Result: Expected Result: Sign in, open the Bank's internal transfers form and don't create the transfer.
