@@ -4,7 +4,7 @@ import CheckingPageForm from "../pages/CheckinPageForm"
 import CheckingPageTable from "../pages/CheckingPageTable";
 import CorrectCheckings from "../datos/CorrectCheckings";
 import IncorrectCheckings from "../datos/IncorrectCheckings"
-import AccountForm from "../pages/AccountForm"
+import CheckingTable from "../pages/CheckingTable";
 
 
 describe('Checkings', () => {
@@ -39,8 +39,8 @@ it('Should see the three pages going forwards and backwards', async ()=> {
 it('Should filter the table with the word "Income"', async ()=> {
     await HomePage.displayCheckingMenu() 
     await HomePage.accessViewCheckingTable()
-    await CheckingPageTable.sendText(CheckingPageTable.searchTableInput, 'Income')
-    let tableLength = await CheckingPageTable.getTableNumberOfRows();
+    await CheckingPageTable.sendText(CheckingPageTable.searchInput, 'Income')
+    let tableLength = await CheckingPageTable.getNumberOfRows();
     let cell;
     for(let i=1; i<= tableLength; i++){
     cell = await CheckingPageTable.getCellFromRow(i);
@@ -63,10 +63,11 @@ CorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
     })
     });
 it('Should switch checking', async ()=> {
+    const accountName = "Individual Checking"
     await HomePage.displayCheckingMenu() 
     await HomePage.accessViewCheckingTable()
-    await CheckingPageTable.activateSwitchChecking()
-    await expect(CheckingPageTable.switchChecked).toHaveAttribute('checked', 'true')
+    await CheckingTable.activateSwitchSaving(accountName)
+    await expect(CheckingTable.switch(accountName)).toHaveAttribute('checked', 'true')
 })
 IncorrectCheckings.forEach(({type, ownership, name, amount, reason}) => {
 it(`Should not create a checking ${reason}`, async ()=> {

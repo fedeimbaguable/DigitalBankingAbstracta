@@ -5,3 +5,7 @@ module.exports = [
    { username : '' , password : 'Demo123!', reason : 'username was not received'},
    { username : 'jsmith@demo.io' , password : '', reason : 'password was not received'}
 ]
+
+export const validUser = [
+   { username : 'jsmith@demo.io' , password : 'Demo123!' },
+];
