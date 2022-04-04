@@ -1,10 +1,6 @@
-import AccountTable from './AccountTable';
+import TransactionsTable from './TransactionsTable';
 
-class CheckingPageTable extends AccountTable {
-
-    get switchChecking () { return $('//*[contains(text(),"Individual Checking")]//ancestor::div[@class="card-body"]//span[@class="switch-handle"]')}
-
-    get switchChecked () { return $('//*[contains(text(),"Individual Checking")]//ancestor::div[@class="card-body"]//input[@class="switch-input"]')}
+class CheckingPageTable extends TransactionsTable {
 
     get checkingTransactionsTableNextButton () {return $('#transactionTable_next')}
 
@@ -21,8 +17,9 @@ class CheckingPageTable extends AccountTable {
     async changeCheckingTransactionsTablePrevious(){
         await this.checkingTransactionsTablePreviousButton.click()
     }
-    async activateSwitchChecking (){
-        await this.switchChecking.click()
+    async activateSwitchChecking (accountName){
+        await this.clickElement(await this.switch(accountName))
     }
 }
+
 export default new CheckingPageTable();
